@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Bahia Dezembro 2026</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,500&family=Poppins:wght@300;400;500;600&display=swap">
+<style>
+:root {
+  color-scheme: light;
+  --marrom: #5E371D; --creme: #EEE7DC; --creme-linha: #E0D8CC; --creme-texto: #C4A882;
+  --texto: #3D1F08; --suave: #8C6040; --laranja: #F09C4F; --lima: #CCCD11; --lima-esc: #8B8B0A;
+  --teal: #C0E0DF; --teal-esc: #3E7A76;
+  --serif: "EB Garamond", "Garamond", Georgia, serif;
+  --sans: "Poppins", system-ui, sans-serif;
+}
+* { box-sizing: border-box; }
+body { background: #fff; color: var(--texto); font-family: var(--sans); font-weight: 300; font-size: 15.5px; line-height: 1.7; margin: 0; }
+h1, h2, h3 { font-family: var(--serif); font-weight: 600; margin: 0; text-wrap: balance; }
+p { margin: 0; }
+.pad { padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+.inner { max-width: 960px; margin: 0 auto; }
+.eyebrow { font-size: 0.74rem; letter-spacing: 0.2em; text-transform: uppercase; font-weight: 500; color: var(--laranja); }
+.old { font-variant-numeric: oldstyle-nums; }
+
+.cover { background: var(--marrom); color: var(--creme); padding-block: 40px 72px; }
+.cover .logo { width: 150px; opacity: 0.6; display: block; }
+.cover .inner { display: flex; flex-direction: column; gap: 20px; }
+.cover h1 { font-size: clamp(3rem, 10vw, 5.8rem); line-height: 1; color: var(--creme); margin-top: 44px; }
+.cover .sub { font-family: var(--serif); font-style: italic; font-size: clamp(1.25rem, 3.4vw, 1.7rem); color: var(--creme-texto); }
+.cover .meta { display: flex; flex-wrap: wrap; gap: 6px 18px; font-size: 0.95rem; color: var(--creme); }
+.cover .close { font-family: var(--serif); font-size: 1.2rem; max-width: 48ch; color: var(--creme); }
+
+section.block { padding-block: 64px; }
+section.block + section.block { border-top: 1px solid var(--creme-linha); }
+.head { display: flex; flex-direction: column; gap: 10px; margin-bottom: 30px; }
+.head h2 { font-size: clamp(2rem, 6vw, 3rem); line-height: 1.05; }
+.head p { color: var(--suave); max-width: 60ch; }
+.bar { height: 4px; width: 56px; background: var(--lima); border-radius: 2px; margin-bottom: 6px; }
+.bar.t { background: var(--teal); } .bar.o { background: var(--laranja); }
+
+.cards { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+.card { border: 1px solid var(--creme-linha); border-radius: 14px; overflow: hidden; background: #fff; display: flex; flex-direction: column; }
+.card img { width: 100%; aspect-ratio: 4 / 4.2; object-fit: cover; display: block; background: var(--creme); }
+.card .body { padding: 20px 20px 22px; display: flex; flex-direction: column; gap: 8px; flex: 1; }
+.card h3 { font-size: 1.55rem; line-height: 1.1; }
+.card .tag { font-size: 0.72rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-esc); font-weight: 500; }
+.price { font-family: var(--serif); font-size: 2rem; font-weight: 600; line-height: 1; margin-top: 6px; }
+.small { font-size: 0.82rem; color: var(--suave); }
+.rows { display: grid; gap: 4px; margin-top: 4px; font-size: 0.9rem; }
+.rows div { display: flex; justify-content: space-between; gap: 12px; border-bottom: 1px dashed var(--creme-linha); padding-block: 3px; }
+
+.note { background: var(--creme); border-radius: 14px; padding: 20px 22px; margin-top: 26px; font-size: 0.92rem; }
+.note b { font-weight: 500; }
+.note ul { margin: 8px 0 0; padding-left: 18px; }
+
+table { width: 100%; border-collapse: collapse; font-size: 0.93rem; }
+th, td { text-align: left; padding: 12px 10px; border-bottom: 1px solid var(--creme-linha); vertical-align: top; }
+th { font-weight: 500; font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--suave); }
+td.n, th.n { text-align: right; white-space: nowrap; }
+.tablewrap { overflow-x: auto; -webkit-overflow-scrolling: touch; }
+
+.flight { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); margin-bottom: 26px; }
+.leg { border: 1px solid var(--creme-linha); border-radius: 14px; padding: 18px 20px; }
+.leg .day { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--teal-esc); font-weight: 500; }
+.leg .times { font-family: var(--serif); font-size: 1.9rem; font-weight: 600; margin-top: 4px; }
+.leg .route { font-size: 0.88rem; color: var(--suave); }
+
+/* consultoria */
+.consult { background: var(--marrom); color: var(--creme); }
+.consult .head h2, .consult .head p { color: var(--creme); }
+.consult .head p { color: var(--creme-texto); }
+.pick { display: grid; gap: 18px; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); margin-bottom: 28px; }
+.pick fieldset { border: 1px solid rgba(238,231,220,0.25); border-radius: 14px; padding: 16px 18px 12px; margin: 0; min-width: 0; }
+.pick legend { font-size: 0.74rem; letter-spacing: 0.18em; text-transform: uppercase; color: var(--laranja); font-weight: 500; padding-inline: 6px; }
+.pick label { display: flex; gap: 10px; align-items: flex-start; padding-block: 7px; cursor: pointer; font-size: 0.92rem; }
+.pick label span.v { margin-left: auto; white-space: nowrap; color: var(--creme-texto); font-variant-numeric: tabular-nums; padding-left: 8px; }
+.pick input { accent-color: #CCCD11; margin-top: 6px; }
+.sum { background: var(--creme); color: var(--texto); border-radius: 16px; padding: 24px 24px 22px; }
+.sum .line { display: flex; justify-content: space-between; gap: 14px; padding-block: 8px; border-bottom: 1px solid var(--creme-linha); font-size: 0.95rem; }
+.sum .line.fee { color: var(--teal-esc); font-weight: 500; }
+.sum .total { display: flex; justify-content: space-between; align-items: baseline; gap: 14px; padding-top: 16px; }
+.sum .total .lbl { font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; font-weight: 500; }
+.sum .total .val { font-family: var(--serif); font-size: clamp(2rem, 7vw, 2.8rem); font-weight: 600; line-height: 1; }
+.sum .foot { margin-top: 10px; font-size: 0.8rem; color: var(--suave); }
+
+.next { padding-block: 60px 72px; background: var(--creme); }
+.next h2 { font-size: clamp(1.9rem, 5.5vw, 2.8rem); margin-block: 8px 12px; }
+.next p { max-width: 58ch; color: var(--suave); }
+footer { background: var(--marrom); padding-block: 28px; }
+footer img { width: 110px; opacity: 0.55; display: block; }
+</style>
+</head>
+<body>
+
+<header class="cover pad">
+  <div class="inner">
+    <img class="logo" src="../logo-aflora-creme.png" alt="Aflora">
+    <h1>Bahia,<br>Corumbau</h1>
+    <p class="sub">Cinco noites de praia, mesa farta e nenhum relógio</p>
+    <div class="meta old"><span>03 a 08 de dezembro de 2026</span><span>5 noites</span><span>2 pessoas</span></div>
+    <p class="close">Aqui estão as opções de hospedagem, transfer e passagem, com valores reais, para você escolher a combinação que mais combina. No fim, o valor da consultoria Aflora sobre a escolha final.</p>
+  </div>
+</header>
+
+<section class="block pad">
+  <div class="inner">
+    <div class="head">
+      <div class="bar"></div>
+      <span class="eyebrow">1. Hospedagem</span>
+      <h2>Fazenda São Francisco do Corumbau</h2>
+      <p>Três categorias para o mesmo período, com pensão completa: café da manhã, almoço e jantar. O restaurante e as instalações são exclusivos para hóspedes. Bebidas e petiscos são cobrados à parte.</p>
+    </div>
+    <div class="cards">
+      <article class="card">
+        <img src="suite-luxo-sede.jpg" alt="Suíte Luxo na Sede" loading="lazy">
+        <div class="body">
+          <span class="tag">Na casa principal</span>
+          <h3>Suíte Luxo na Sede</h3>
+          <p class="small">Perto do restaurante e da área comum, para quem quer estar no centro da vida da fazenda.</p>
+          <div class="price old">R$ 19.698</div>
+          <div class="rows">
+            <div><span>Diária média</span><span class="old">R$ 3.752</span></div>
+            <div><span>5 noites</span><span class="old">R$ 18.760</span></div>
+            <div><span>ISS 5%</span><span class="old">R$ 938</span></div>
+          </div>
+          <p class="small">Total com ISS, para o casal.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="suite-luxo-bangalo.jpg" alt="Suíte Luxo em Bangalô" loading="lazy">
+        <div class="body">
+          <span class="tag">Bangalô</span>
+          <h3>Suíte Luxo em Bangalô</h3>
+          <p class="small">Mais reservado, com a privacidade de um bangalô e a mesma estrutura da fazenda por perto.</p>
+          <div class="price old">R$ 20.958</div>
+          <div class="rows">
+            <div><span>Diária média</span><span class="old">R$ 3.992</span></div>
+            <div><span>5 noites</span><span class="old">R$ 19.960</span></div>
+            <div><span>ISS 5%</span><span class="old">R$ 998</span></div>
+          </div>
+          <p class="small">Total com ISS, para o casal.</p>
+        </div>
+      </article>
+      <article class="card">
+        <img src="bangalo-super-luxo.jpg" alt="Bangalô Super Luxo" loading="lazy">
+        <div class="body">
+          <span class="tag">A categoria mais ampla</span>
+          <h3>Bangalô Super Luxo</h3>
+          <p class="small">O maior nível de espaço e privacidade da fazenda, para uma comemoração que vale a pena fazer com calma.</p>
+          <div class="price old">R$ 26.880</div>
+          <div class="rows">
+            <div><span>Diária média</span><span class="old">R$ 5.120</span></div>
+            <div><span>5 noites</span><span class="old">R$ 25.600</span></div>
+            <div><span>ISS 5%</span><span class="old">R$ 1.280</span></div>
+          </div>
+          <p class="small">Total com ISS, para o casal.</p>
+        </div>
+      </article>
+    </div>
+    <div class="note">
+      <b>Condições do hotel</b>
+      <ul>
+        <li>Tarifa net especial, já refletida nos valores acima.</li>
+        <li>Check-in a partir das 15h e check-out até as 12h. Chegada antecipada e saída tardia sob consulta.</li>
+        <li>Para confirmar, o hotel pede o pagamento de 100% da reserva com ISS. O saldo de extras é pago no check-out.</li>
+        <li>Cancelamento ou alteração de data: 10% até 31 dias antes do check-in, 20% de 30 a 16 dias antes e 30% a partir de 15 dias antes. O restante vira crédito de 6 meses, pessoal e intransferível.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block pad">
+  <div class="inner">
+    <div class="head">
+      <div class="bar t"></div>
+      <span class="eyebrow">2. Transfer</span>
+      <h2>De Porto Seguro até o Corumbau</h2>
+      <p>O hotel fica em uma ponta com acesso difícil, e o transfer faz parte da experiência. São quatro modelos privativos, com valores por trecho. O total considera ida e volta.</p>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Modelo</th><th>Duração</th><th>Capacidade</th><th class="n">Por trecho</th><th class="n">Ida e volta</th></tr></thead>
+        <tbody>
+          <tr><td><b>Carro</b><br><span class="small">O mais simples, pela estrada</span></td><td>cerca de 4h</td><td>até 4 pessoas</td><td class="n old">R$ 1.300</td><td class="n old">R$ 2.600</td></tr>
+          <tr><td><b>Lancha 26 pés</b><br><span class="small">Pelo mar, de preferência de manhã. Depende do clima.</span></td><td>cerca de 1h30</td><td>até 8 pessoas</td><td class="n old">R$ 4.500</td><td class="n old">R$ 9.000</td></tr>
+          <tr><td><b>Helicóptero R44</b><br><span class="small">1 bagagem de mão por passageiro</span></td><td>cerca de 20 min</td><td>até 3 pessoas</td><td class="n old">R$ 6.000</td><td class="n old">R$ 12.000</td></tr>
+          <tr><td><b>Helicóptero H120</b><br><span class="small">2 malas de 23 kg e 2 de 10 kg</span></td><td>cerca de 18 min</td><td>até 4 pessoas</td><td class="n old">R$ 9.000</td><td class="n old">R$ 18.000</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">
+      <b>Bom saber</b>
+      <ul>
+        <li>No voo de ida (pouso às 10:20), o carro chega ao hotel por volta do horário do check-in.</li>
+        <li>Na volta (voo às 17:50), o ideal é sair do hotel por volta das 11:30 para chegar com folga.</li>
+        <li>O transfer aéreo tem limite de chegada até 16h30 e saída até 17h, sujeito ao clima.</li>
+        <li>Valores aproximados, sujeitos a alteração e às políticas de cada prestador, que cobram direto.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="block pad">
+  <div class="inner">
+    <div class="head">
+      <div class="bar o"></div>
+      <span class="eyebrow">3. Passagem aérea</span>
+      <h2>LATAM, voo direto</h2>
+      <p>São Paulo (Congonhas) e Porto Seguro, ida e volta, sem escala. Tarifa Light, sem reembolso. Valores para 2 pessoas, com a opção de levar ou não bagagem despachada.</p>
+    </div>
+    <div class="flight">
+      <div class="leg"><div class="day old">Qui, 03 de dezembro</div><div class="times old">08:20 → 10:20</div><div class="route">CGH → BPS, direto, 2h</div></div>
+      <div class="leg"><div class="day old">Ter, 08 de dezembro</div><div class="times old">17:50 → 20:00</div><div class="route">BPS → CGH, direto, 2h10</div></div>
+    </div>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Opção</th><th class="n">Pix</th><th class="n">Cartão à vista</th><th class="n">Em até 3x</th></tr></thead>
+        <tbody>
+          <tr><td><b>Sem bagagem</b><br><span class="small">por pessoa</span></td><td class="n old">R$ 1.967,68</td><td class="n old">R$ 2.078,00</td><td class="n old">R$ 2.190,00</td></tr>
+          <tr><td><b>Sem bagagem</b><br><span class="small">2 pessoas</span></td><td class="n old">R$ 3.935,36</td><td class="n old">R$ 4.156,00</td><td class="n old">R$ 4.380,00</td></tr>
+          <tr><td><b>Com bagagem</b><br><span class="small">por pessoa</span></td><td class="n old">R$ 2.143,21</td><td class="n old">R$ 2.287,00</td><td class="n old">R$ 2.370,00</td></tr>
+          <tr><td><b>Com bagagem</b><br><span class="small">2 pessoas</span></td><td class="n old">R$ 4.286,42</td><td class="n old">R$ 4.574,00</td><td class="n old">R$ 4.740,00</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <div class="note">Os preços dependem da disponibilidade ao pagar. A tarifa é confirmada na etapa de pagamento.</div>
+  </div>
+</section>
+
+<section class="block consult pad">
+  <div class="inner">
+    <div class="head">
+      <div class="bar"></div>
+      <span class="eyebrow">4. Consultoria Aflora</span>
+      <h2>Monte a sua combinação</h2>
+      <p>A consultoria Aflora é de 10% sobre a opção final escolhida: hospedagem, modelo de transfer e passagem aérea. Escolha abaixo e veja o total.</p>
+    </div>
+
+    <div class="pick">
+      <fieldset>
+        <legend>Hospedagem</legend>
+        <label><input type="radio" name="h" value="19698" data-l="Suíte Luxo na Sede" checked>Suíte Luxo na Sede<span class="v old">R$ 19.698</span></label>
+        <label><input type="radio" name="h" value="20958" data-l="Suíte Luxo em Bangalô">Suíte Luxo em Bangalô<span class="v old">R$ 20.958</span></label>
+        <label><input type="radio" name="h" value="26880" data-l="Bangalô Super Luxo">Bangalô Super Luxo<span class="v old">R$ 26.880</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Transfer (ida e volta)</legend>
+        <label><input type="radio" name="t" value="2600" data-l="Transfer de carro" checked>Carro<span class="v old">R$ 2.600</span></label>
+        <label><input type="radio" name="t" value="9000" data-l="Transfer de lancha">Lancha<span class="v old">R$ 9.000</span></label>
+        <label><input type="radio" name="t" value="12000" data-l="Helicóptero R44">Helicóptero R44<span class="v old">R$ 12.000</span></label>
+        <label><input type="radio" name="t" value="18000" data-l="Helicóptero H120">Helicóptero H120<span class="v old">R$ 18.000</span></label>
+      </fieldset>
+      <fieldset>
+        <legend>Passagem aérea (2 pessoas)</legend>
+        <label><input type="radio" name="b" value="com" checked>Com bagagem</label>
+        <label><input type="radio" name="b" value="sem">Sem bagagem</label>
+        <label><input type="radio" name="p" value="0" checked>Pix</label>
+        <label><input type="radio" name="p" value="1">Cartão à vista</label>
+        <label><input type="radio" name="p" value="2">Cartão em até 3x</label>
+      </fieldset>
+    </div>
+
+    <div class="sum" aria-live="polite">
+      <div class="line"><span id="lh">Hospedagem</span><span id="vh" class="old"></span></div>
+      <div class="line"><span id="lt">Transfer</span><span id="vt" class="old"></span></div>
+      <div class="line"><span id="lf">Passagem</span><span id="vf" class="old"></span></div>
+      <div class="line"><span>Subtotal</span><span id="vs" class="old"></span></div>
+      <div class="line fee"><span>Consultoria Aflora (10%)</span><span id="vc" class="old"></span></div>
+      <div class="total"><span class="lbl">Total da viagem</span><span class="val old" id="vtot"></span></div>
+      <p class="foot">Não inclui bebidas e petiscos no hotel, nem passeios, que definimos em seguida.</p>
+    </div>
+  </div>
+</section>
+
+<section class="next pad">
+  <div class="inner">
+    <span class="eyebrow">Próximo passo</span>
+    <h2>Em seguida, os passeios</h2>
+    <p>Com hospedagem, transfer e voo definidos, a gente desenha os passeios e os momentos especiais dos cinco dias, no ritmo que combina com vocês.</p>
+  </div>
+</section>
+
+<footer class="pad"><div class="inner"><img src="../logo-aflora-creme.png" alt="Aflora"></div></footer>
+
+<script>
+(function () {
+  var voo = { com: [4286.42, 4574, 4740], sem: [3935.36, 4156, 4380] };
+  var pagLabel = ['Pix', 'cartão à vista', 'cartão em até 3x'];
+  var brl = function (n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); };
+  function val(name) { return document.querySelector('input[name="' + name + '"]:checked'); }
+  function calc() {
+    var h = val('h'), t = val('t'), b = val('b').value, p = +val('p').value;
+    var hv = +h.value, tv = +t.value, fv = voo[b][p];
+    var sub = hv + tv + fv, fee = Math.round(sub * 10) / 100;
+    document.getElementById('lh').textContent = h.dataset.l + ', 5 noites com ISS';
+    document.getElementById('lt').textContent = t.dataset.l + ', ida e volta';
+    document.getElementById('lf').textContent = 'Passagem LATAM, ' + (b === 'com' ? 'com' : 'sem') + ' bagagem, ' + pagLabel[p];
+    document.getElementById('vh').textContent = brl(hv);
+    document.getElementById('vt').textContent = brl(tv);
+    document.getElementById('vf').textContent = brl(fv);
+    document.getElementById('vs').textContent = brl(sub);
+    document.getElementById('vc').textContent = brl(fee);
+    document.getElementById('vtot').textContent = brl(sub + fee);
+  }
+  document.querySelectorAll('.pick input').forEach(function (i) { i.addEventListener('change', calc); });
+  calc();
+})();
+</script>
+</body>
+</html>
