@@ -243,34 +243,34 @@ footer img { width: 110px; opacity: 0.55; display: block; }
     <div class="pick">
       <fieldset>
         <legend>Hospedagem</legend>
-        <label><input type="radio" name="h" value="19698" data-l="Suíte Luxo na Sede" checked>Suíte Luxo na Sede<span class="v old">R$ 19.698</span></label>
-        <label><input type="radio" name="h" value="20958" data-l="Suíte Luxo em Bangalô">Suíte Luxo em Bangalô<span class="v old">R$ 20.958</span></label>
-        <label><input type="radio" name="h" value="26880" data-l="Bangalô Super Luxo">Bangalô Super Luxo<span class="v old">R$ 26.880</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" value="19698" data-l="Suíte Luxo na Sede" checked>Suíte Luxo na Sede<span class="v old">R$ 19.698</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" value="20958" data-l="Suíte Luxo em Bangalô">Suíte Luxo em Bangalô<span class="v old">R$ 20.958</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" value="26880" data-l="Bangalô Super Luxo">Bangalô Super Luxo<span class="v old">R$ 26.880</span></label>
       </fieldset>
       <fieldset>
         <legend>Transfer (ida e volta)</legend>
-        <label><input type="radio" name="t" value="2600" data-l="Transfer de carro" checked>Carro<span class="v old">R$ 2.600</span></label>
-        <label><input type="radio" name="t" value="9000" data-l="Transfer de lancha">Lancha<span class="v old">R$ 9.000</span></label>
-        <label><input type="radio" name="t" value="12000" data-l="Helicóptero R44">Helicóptero R44<span class="v old">R$ 12.000</span></label>
-        <label><input type="radio" name="t" value="18000" data-l="Helicóptero H120">Helicóptero H120<span class="v old">R$ 18.000</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="2600" data-l="Transfer de carro" checked>Carro<span class="v old">R$ 2.600</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="9000" data-l="Transfer de lancha">Lancha<span class="v old">R$ 9.000</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="12000" data-l="Helicóptero R44">Helicóptero R44<span class="v old">R$ 12.000</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="18000" data-l="Helicóptero H120">Helicóptero H120<span class="v old">R$ 18.000</span></label>
       </fieldset>
       <fieldset>
         <legend>Passagem aérea (2 pessoas)</legend>
-        <label><input type="radio" name="b" value="com" checked>Com bagagem</label>
-        <label><input type="radio" name="b" value="sem">Sem bagagem</label>
-        <label><input type="radio" name="p" value="0" checked>Pix</label>
-        <label><input type="radio" name="p" value="1">Cartão à vista</label>
-        <label><input type="radio" name="p" value="2">Cartão em até 3x</label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="b" value="com" checked>Com bagagem</label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="b" value="sem">Sem bagagem</label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="p" value="0" checked>Pix</label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="p" value="1">Cartão à vista</label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="p" value="2">Cartão em até 3x</label>
       </fieldset>
     </div>
 
     <div class="sum" aria-live="polite">
-      <div class="line"><span id="lh">Hospedagem</span><span id="vh" class="old"></span></div>
-      <div class="line"><span id="lt">Transfer</span><span id="vt" class="old"></span></div>
-      <div class="line"><span id="lf">Passagem</span><span id="vf" class="old"></span></div>
-      <div class="line"><span>Subtotal</span><span id="vs" class="old"></span></div>
-      <div class="line fee"><span>Consultoria Aflora (10%)</span><span id="vc" class="old"></span></div>
-      <div class="total"><span class="lbl">Total da viagem</span><span class="val old" id="vtot"></span></div>
+      <div class="line"><span id="lh">Suíte Luxo na Sede, 5 noites com ISS</span><span id="vh" class="old">R$ 19.698,00</span></div>
+      <div class="line"><span id="lt">Transfer de carro, ida e volta</span><span id="vt" class="old">R$ 2.600,00</span></div>
+      <div class="line"><span id="lf">Passagem LATAM, com bagagem, Pix</span><span id="vf" class="old">R$ 4.286,42</span></div>
+      <div class="line"><span>Subtotal</span><span id="vs" class="old">R$ 26.584,42</span></div>
+      <div class="line fee"><span>Consultoria Aflora (10%)</span><span id="vc" class="old">R$ 2.658,44</span></div>
+      <div class="total"><span class="lbl">Total da viagem</span><span class="val old" id="vtot">R$ 29.242,86</span></div>
       <p class="foot">Não inclui bebidas e petiscos no hotel, nem passeios, que definimos em seguida.</p>
     </div>
   </div>
@@ -306,8 +306,9 @@ footer img { width: 110px; opacity: 0.55; display: block; }
     document.getElementById('vc').textContent = brl(fee);
     document.getElementById('vtot').textContent = brl(sub + fee);
   }
-  document.querySelectorAll('.pick input').forEach(function (i) { i.addEventListener('change', calc); });
-  calc();
+  window.aflCalc = calc;
+  document.querySelectorAll('.pick input').forEach(function (i) { i.addEventListener('change', calc); i.addEventListener('click', calc); });
+  try { calc(); } catch (e) {}
 })();
 </script>
 </body>
