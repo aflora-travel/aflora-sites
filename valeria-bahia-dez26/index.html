@@ -92,6 +92,14 @@ td.n, th.n { text-align: right; white-space: nowrap; }
 .next p { max-width: 58ch; color: var(--suave); }
 footer { background: var(--marrom); padding-block: 28px; }
 footer img { width: 110px; opacity: 0.55; display: block; }
+
+.two { display: grid; gap: 22px; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+.panel { border: 1px solid var(--creme-linha); border-radius: 14px; padding: 22px 22px 18px; }
+.panel h3 { font-size: 1.5rem; margin-bottom: 8px; }
+.panel ul { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; font-size: 0.93rem; }
+.panel li b { font-weight: 500; }
+.panel .st { color: var(--teal-esc); font-size: 0.74rem; letter-spacing: 0.14em; text-transform: uppercase; font-weight: 500; margin: 14px 0 6px; display: block; }
+.dur { color: var(--suave); }
 </style>
 </head>
 <body>
@@ -176,8 +184,46 @@ footer img { width: 110px; opacity: 0.55; display: block; }
 <section class="block pad">
   <div class="inner">
     <div class="head">
+      <div class="bar o"></div>
+      <span class="eyebrow">2. A vida na Fazenda</span>
+      <h2>Silêncio, conforto e cuidado discreto</h2>
+      <p>No Corumbau o tempo desacelera e a natureza conduz o ritmo dos dias. É assim que o hotel descreve a estada, e é o que os hóspedes repetem no livro de visitas: tranquilidade, quietude, sossego e uma equipe atenciosa.</p>
+    </div>
+    <div class="two">
+      <div class="panel">
+        <h3>Incluído na diária</h3>
+        <ul>
+          <li><b>Bicicletas</b> para explorar a vila e as praias na maré baixa.</li>
+          <li><b>Stand up paddle e caiaques</b> nas águas calmas da Ponta do Corumbau.</li>
+          <li><b>Beach tennis</b>, com raquetes e bolas na recepção.</li>
+        </ul>
+        <span class="st">Sob consulta</span>
+        <ul>
+          <li><b>Massagens</b>, com menu e horários pedidos na recepção.</li>
+          <li><b>Yoga</b>, com instrutora local.</li>
+        </ul>
+        <p class="small" style="margin-top:12px">Atividades sujeitas à disponibilidade.</p>
+      </div>
+      <div class="panel">
+        <h3>Informações práticas</h3>
+        <ul>
+          <li><b>Refeições:</b> café da manhã, almoço e jantar inclusos, servidos das 8h às 22h. Bebidas e extras, inclusive café expresso, são cobrados à parte.</li>
+          <li><b>Vinhos e bebidas próprios:</b> podem ter taxa de rolha, cobrada no check-out.</li>
+          <li><b>Energia:</b> 220V. Para aparelhos 110V, a recepção informa sobre transformador.</li>
+          <li><b>Internet:</b> wi-fi em toda a Fazenda.</li>
+          <li><b>Cofre:</b> em todas as acomodações.</li>
+          <li><b>Política:</b> não é permitido fumar nas acomodações e áreas comuns. Instalações e restaurante são exclusivos para hóspedes.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="block pad">
+  <div class="inner">
+    <div class="head">
       <div class="bar t"></div>
-      <span class="eyebrow">2. Transfer</span>
+      <span class="eyebrow">3. Transfer</span>
       <h2>De Porto Seguro até o Corumbau</h2>
       <p>O hotel fica em uma ponta com acesso difícil, e o transfer faz parte da experiência. São quatro modelos privativos, com valores por trecho. O total considera ida e volta.</p>
     </div>
@@ -208,7 +254,7 @@ footer img { width: 110px; opacity: 0.55; display: block; }
   <div class="inner">
     <div class="head">
       <div class="bar o"></div>
-      <span class="eyebrow">3. Passagem aérea</span>
+      <span class="eyebrow">4. Passagem aérea</span>
       <h2>LATAM, voo direto</h2>
       <p>São Paulo (Congonhas) e Porto Seguro, ida e volta, sem escala. Tarifa Light, sem reembolso. Valores para 2 pessoas, com a opção de levar ou não bagagem despachada.</p>
     </div>
@@ -235,7 +281,7 @@ footer img { width: 110px; opacity: 0.55; display: block; }
   <div class="inner">
     <div class="head">
       <div class="bar"></div>
-      <span class="eyebrow">4. Consultoria Aflora</span>
+      <span class="eyebrow">5. Consultoria Aflora</span>
       <h2>Monte a sua combinação</h2>
       <p>A consultoria Aflora é de 10% sobre a opção final escolhida: hospedagem, modelo de transfer e passagem aérea. Escolha abaixo e veja o total.</p>
     </div>
@@ -280,7 +326,28 @@ footer img { width: 110px; opacity: 0.55; display: block; }
   <div class="inner">
     <span class="eyebrow">Próximo passo</span>
     <h2>Em seguida, os passeios</h2>
-    <p>Com hospedagem, transfer e voo definidos, a gente desenha os passeios e os momentos especiais dos cinco dias, no ritmo que combina com vocês.</p>
+    <p>Com hospedagem, transfer e voo definidos, a gente desenha os passeios e os momentos especiais dos cinco dias, no ritmo que combina com vocês. Estes são os que a região oferece, todos com parceiros locais e pagos direto a eles.</p>
+    <div class="two" style="margin-top:26px">
+      <div class="panel" style="background:#fff">
+        <h3>Por terra</h3>
+        <ul>
+          <li><b>Caraíva</b> <span class="dur">(cerca de 4h)</span><br>Travessia do Rio Corumbau, Reserva Pataxó e o vilarejo.</li>
+          <li><b>Centro Cultural Pataxó Porto do Boi</b> <span class="dur">(cerca de 4h)</span><br>Vivência cultural, que combina com Caraíva.</li>
+          <li><b>Barra do Cahy de quadriciclo</b> <span class="dur">(cerca de 4h)</span><br>Com guia ou por conta própria.</li>
+        </ul>
+      </div>
+      <div class="panel" style="background:#fff">
+        <h3>De barco e lancha</h3>
+        <ul>
+          <li><b>Praia do Espelho</b> <span class="dur">(cerca de 6h)</span><br>Um dos destinos mais famosos da região.</li>
+          <li><b>Corais de Corumbau</b> <span class="dur">(cerca de 3h)</span><br>Snorkel e vida marinha, a cerca de 30 minutos de barco.</li>
+          <li><b>Barra do Cahy</b> <span class="dur">(cerca de 6h)</span><br>História e paisagens.</li>
+          <li><b>Caraíva pelo mar</b> <span class="dur">(cerca de 4h)</span><br>Chegada ao vilarejo por mar.</li>
+          <li><b>Pescaria com pescador local</b> <span class="dur">(cerca de 4h)</span><br>Material fornecido, e as modalidades variam com a época.</li>
+        </ul>
+        <p class="small" style="margin-top:12px">A observação de baleias acontece de julho a setembro, fora do período da viagem.</p>
+      </div>
+    </div>
   </div>
 </section>
 
