@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Hospedagem Carol e Alexandre</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+/* Layout: coluna editorial. Abertura, faixa de números, uma seção por parada na ordem da viagem (data, hotel, foto, tabela de quartos com e sem café), resumo do cenário e pendências. Paleta da proposta Aflora. */
+:root {
+  --bg: #F3EBDD;
+  --surface: #FBF6EC;
+  --fg: #3A2415;
+  --muted: #6E5A4A;
+  --line: #DCCFBB;
+  --accent: #D8481C;
+  --highlight: #F4E96A;
+  --highlight-ink: #3A2415;
+  --brown: #4A2C17;
+  --brown-ink: #F3EBDD;
+  --soft: #EADFCB;
+  --display: 'Instrument Serif', 'Times New Roman', serif;
+  --body: 'DM Sans', system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #1E140D; --surface: #2A1C12; --fg: #F1E7D7; --muted: #BBA791; --line: #4A3626;
+    --accent: #F0683A; --highlight: #E9DE5A; --highlight-ink: #2A1C12; --brown: #120B06; --brown-ink: #F1E7D7; --soft: #35241A;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #1E140D; --surface: #2A1C12; --fg: #F1E7D7; --muted: #BBA791; --line: #4A3626;
+  --accent: #F0683A; --highlight: #E9DE5A; --highlight-ink: #2A1C12; --brown: #120B06; --brown-ink: #F1E7D7; --soft: #35241A;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--fg); font-family: var(--body); font-size: 16px; line-height: 1.6; padding-inline: 16px; }
+.wrap { max-width: 900px; margin: 0 auto; padding-block: 40px 72px; display: flex; flex-direction: column; gap: 56px; }
+.eyebrow { font-size: 12px; letter-spacing: .14em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+h1, h2, h3 { font-family: var(--display); font-weight: 400; text-wrap: balance; margin: 0; letter-spacing: -.01em; }
+h1 { font-size: clamp(44px, 9vw, 84px); line-height: 1; }
+h2 { font-size: clamp(30px, 5vw, 42px); line-height: 1.1; }
+h3 { font-size: 26px; line-height: 1.15; }
+h4 { font-size: 15px; margin: 0 0 6px; font-weight: 700; }
+p { margin: 0; max-width: 65ch; }
+.hero { display: flex; flex-direction: column; gap: 20px; }
+.lede { font-family: var(--display); font-style: italic; font-size: clamp(22px, 3.6vw, 30px); line-height: 1.25; color: var(--accent); max-width: 30ch; text-wrap: balance; }
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(130px, 1fr)); background: var(--brown); color: var(--brown-ink); }
+.fact { padding: 20px 18px; display: flex; flex-direction: column; gap: 4px; border-right: 1px solid rgba(243,235,221,.18); }
+.fact:last-child { border-right: 0; }
+.fact b { font-family: var(--display); font-weight: 400; font-size: 34px; line-height: 1; font-variant-numeric: tabular-nums; }
+.fact span { font-size: 13px; opacity: .85; }
+.stop { display: flex; flex-direction: column; gap: 20px; min-width: 0; }
+.stophead { display: flex; flex-direction: column; gap: 6px; border-top: 2px solid var(--fg); padding-top: 14px; }
+.dates { font-size: 13px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+.hotel { font-family: var(--display); font-size: clamp(30px, 5vw, 44px); line-height: 1.05; }
+.photo { width: 100%; max-width: 100%; aspect-ratio: 16 / 9; object-fit: cover; display: block; background: var(--soft); }
+.twocol { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 20px; }
+.col { background: var(--surface); border: 1px solid var(--line); padding: 20px; display: flex; flex-direction: column; gap: 10px; min-width: 0; }
+.col ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+.tablewrap { overflow-x: auto; border: 1px solid var(--line); background: var(--surface); }
+table { border-collapse: collapse; width: 100%; min-width: 520px; font-variant-numeric: tabular-nums; }
+th, td { text-align: left; padding: 13px 16px; border-bottom: 1px solid var(--line); vertical-align: top; }
+th { font-size: 12px; letter-spacing: .1em; text-transform: uppercase; color: var(--muted); font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+td.num { white-space: nowrap; }
+td small { display: block; color: var(--muted); font-size: 13px; }
+.pick { background: var(--highlight); color: var(--highlight-ink); font-size: 11px; letter-spacing: .08em; text-transform: uppercase; padding: 2px 6px; margin-left: 6px; font-weight: 700; white-space: nowrap; }
+.note { font-size: 14px; color: var(--muted); }
+.pending { background: var(--soft); border: 1px dashed var(--muted); padding: 22px; display: flex; flex-direction: column; gap: 8px; }
+.pending b { font-family: var(--display); font-weight: 400; font-size: 24px; }
+.cancel { display: grid; grid-template-columns: repeat(auto-fit, minmax(110px, 1fr)); border: 1px solid var(--line); background: var(--surface); }
+.cancel div { padding: 12px 16px; border-right: 1px solid var(--line); display: flex; flex-direction: column; gap: 2px; }
+.cancel div:last-child { border-right: 0; }
+.cancel b { font-family: var(--display); font-weight: 400; font-size: 28px; font-variant-numeric: tabular-nums; }
+.cancel span { font-size: 13px; color: var(--muted); }
+.todo { background: var(--brown); color: var(--brown-ink); padding: 28px; display: flex; flex-direction: column; gap: 14px; }
+.todo h2 { color: var(--brown-ink); }
+.todo ul { margin: 0; padding-left: 18px; display: flex; flex-direction: column; gap: 8px; }
+.total td { font-weight: 700; background: var(--soft); }
+footer { font-size: 13px; color: var(--muted); border-top: 1px solid var(--line); padding-top: 16px; display: flex; flex-direction: column; gap: 6px; }
+a { color: var(--accent); }
+:focus-visible { outline: 3px solid var(--accent); outline-offset: 2px; }
+</style>
+
+</head>
+<body>
+<main class="wrap">
+
+  <header class="hero">
+    <div class="eyebrow">Aflora para Carol e Alexandre · Japão · 27 de fevereiro a 21 de março de 2027</div>
+    <h1>Onde vocês vão dormir</h1>
+    <p class="lede">Um hotel por parada, do jeito que vocês escolheram.</p>
+    <p>Aqui estão as paradas na ordem da viagem, com o quarto de cada hotel. Os valores são pro casal, em reais, com impostos. O café da manhã está incluído em Myoko e no Gora Kadan (que também inclui o jantar), e nos outros hotéis vocês decidem lá, no hotel ou na rua. Os hotéis podem ser pagos à Aflora em até 12x sem juros no cartão de crédito. Cada quarto mostra até quando dá pra cancelar sem custo. Tudo sujeito à disponibilidade até a reserva.</p>
+  </header>
+
+  <div class="facts" role="list">
+    <div class="fact" role="listitem"><b>22</b><span>noites, de 27/02 a 21/03</span></div>
+    <div class="fact" role="listitem"><b>7</b><span>paradas, com Hakone e o Fuji no caminho</span></div>
+    <div class="fact" role="listitem"><b>7</b><span>hotéis, um por parada</span></div>
+    <div class="fact" role="listitem"><b>1</b><span>noite de ryokan, no caminho do Fuji</span></div>
+  </div>
+
+  <!-- TOQUIO 1 -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">27 de fevereiro a 1 de março · 2 noites · Tóquio</div>
+      <div class="hotel">Tokyu Stay Ginza</div>
+    </div>
+    <img class="photo" src="img/tokyu.jpg" alt="Quarto do Tokyu Stay Ginza com cama de casal e mesa de trabalho">
+    <p>Vocês chegam às 17h20 depois de um voo longo, e esse hotel resolve a primeira noite sem esforço. Fica em Ginza, a 1 minuto a pé do teatro Kabuki-za e perto de duas estações de metrô, com recepção 24 horas e lavanderia. O quarto é compacto, mas pra duas noites de chegada e descanso funciona muito bem.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total, 2 noites</th></tr></thead>
+        <tbody>
+          <tr><td>Superior, cama Queen<small>18 m², não reembolsável</small></td><td class="num">R$ 1.852</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Essa tarifa não é reembolsável. Existe a versão com reembolso total até 13 de fevereiro, que custa cerca de R$ 290 a mais. Esse hotel serve café da manhã, mas ele não vem na tarifa: vocês pagam no local, e o valor eu confirmo com o hotel.</p>
+  </section>
+
+  <!-- MYOKO -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">1 a 6 de março · 5 noites · Myoko Kogen</div>
+      <div class="hotel">Yunoyado Mochizuki</div>
+    </div>
+    <img class="photo" src="img/yuno.jpg" alt="Quarto moderno do Yunoyado Mochizuki, com cama baixa, piso de madeira e janela grande">
+    <p class="note">Foto de um dos quartos do hotel. O estilo varia entre as categorias.</p>
+    <p>Um hotel de gestão familiar no meio da vila de Akakura Onsen, a 6 minutos a pé dos lifts do Akakura Onsen e do Akakan. Tem onsen no hotel, café da manhã buffet incluído e guarda de equipamento de esqui. Os restaurantes e bares da vila ficam a pé, com um café e um restaurante a uns 350 m, então dá pra jantar fora ou no próprio hotel, que também vende planos com jantar. O Alexandre sai pra pista a pé, e a Carol fica com o onsen e a vila por perto.</p>
+    <p>O hotel se chamava Akakura Park Hotel e mudou de nome em outubro de 2024, quando reabriu com quartos reformados. Com o nome antigo, ele tem nota 4,0 no Google (94 avaliações) e no Tripadvisor (29 avaliações), com elogios à equipe, ao café da manhã e ao onsen. Já mandei um e-mail ao hotel com as dúvidas que sobraram.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total, 5 noites, com café da manhã</th></tr></thead>
+        <tbody>
+          <tr><td>Duplo superior, duas camas grandes<small>31 m², vista da montanha, reembolsável até 15 de fevereiro, só 1 disponível</small></td><td class="num">R$ 11.050</td></tr>
+          <tr><td>Duplo, duas camas de solteiro<small>15 m², o mais simples, reembolsável até 15 de fevereiro</small></td><td class="num">R$ 8.633</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">O Duplo luxo de 55 m² esgotou. O Duplo superior é o último quarto dessa categoria nas datas de vocês. O jantar não está incluído: vocês jantam no restaurante do hotel ou na vila. Já pedi ao hotel um quarto silencioso, longe da entrada, e confirmo com eles os últimos detalhes.</p>
+  </section>
+
+  <!-- KANAZAWA -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">6 a 8 de março · 2 noites · Kanazawa</div>
+      <div class="hotel">Mitsui Garden Hotel Kanazawa</div>
+    </div>
+    <img class="photo" src="img/mitsui.jpg" alt="Banho público panorâmico do Mitsui Garden Hotel Kanazawa ao entardecer, com vista da cidade e das montanhas">
+    <p>A Carol falou em mercado de peixe de manhã, e esse hotel fica a 3 minutos a pé do mercado Omicho. O santuário Oyama está a 5 minutos e o castelo a 10. No 13º andar tem um banho público panorâmico com vista da cidade e do parque do castelo. Nota 9,4 em mais de mil avaliações, e pra duas noites a localização resolve quase tudo a pé.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total, 2 noites, sem café</th></tr></thead>
+        <tbody>
+          <tr><td>Superior, cama King<small>27 m², não reembolsável</small></td><td class="num">R$ 1.548</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Essa tarifa não é reembolsável. Existe a versão com reembolso total até 2 de março, que custa cerca de R$ 395 a mais. O café da manhã vocês decidem lá, no hotel ou na rua.</p>
+  </section>
+
+  <!-- KYOTO -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">8 a 13 de março · 5 noites · Kyoto</div>
+      <div class="hotel">Nohga Hotel Kiyomizu Kyoto</div>
+    </div>
+    <img class="photo" src="img/nohga.jpg" alt="Fachada do Nohga Hotel Kiyomizu Kyoto à noite, com madeira escura e plantas na entrada">
+    <p>Fica em Higashiyama, a 10 minutos a pé do templo Kiyomizu-dera e a 13 do santuário Yasaka, com nota 9,8 em mais de 2 mil avaliações. Tem arte contemporânea nos corredores, bicicletas pra pedalar pelas ruelas e um bar com vista da cidade. Vocês acordam dentro do bairro histórico, e é isso que faz Kyoto valer a pena.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total, 5 noites, sem café</th></tr></thead>
+        <tbody>
+          <tr><td>Superior, cama King<small>23 m², reembolsável até 6 de março, só 2 disponíveis</small></td><td class="num">R$ 5.958</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">O hotel não tem elevador, então a gente combina o envio das malas entre as cidades.</p>
+  </section>
+
+  <!-- OSAKA -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">13 a 16 de março · 3 noites · Osaka</div>
+      <div class="hotel">Osaka Excel Hotel Tokyu</div>
+    </div>
+    <img class="photo" src="img/osaka.jpg" alt="Bar e lounge do Osaka Excel Hotel Tokyu no 16º andar, com piscina de água refletindo a cidade ao entardecer">
+    <p>Osaka é a cidade de comer, e esse hotel fica a cerca de 8 minutos a pé da Shinsaibashi-suji e da Amerikamura, com Dotonbori logo ali. Tem um bar no 16º andar com vista da cidade e um restaurante no 17º. Dormir a pé de tudo pesa mais aqui do que em qualquer outra parada, e o Koyasan fica pra um bate e volta.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total, 3 noites, sem café</th></tr></thead>
+        <tbody>
+          <tr><td>Superior, cama Queen<small>vista da cidade, reembolsável até 12 de março</small></td><td class="num">R$ 2.334</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <!-- HAKONE -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">16 a 17 de março · 1 noite · Hakone, com o Monte Fuji</div>
+      <div class="hotel">Gora Kadan</div>
+    </div>
+    <img class="photo" src="img/gora.jpg" alt="Quarto de tatame do Gora Kadan com duas poltronas de vime olhando um jardim japonês">
+    <p>O Fuji fica no caminho do trem entre Osaka e Tóquio, e essa é a noite de ryokan da viagem. O Gora Kadan foi casa de veraneio da família imperial, hoje tem três Chaves Michelin e fica em Gora, dentro do parque nacional de Hakone. Quartos de tatame com jardim, onsen e uma piscina interna. Os advisors da Fora dizem que é um ryokan pra uma ou duas noites, que é exatamente o plano.</p>
+    <p>Nas avaliações de hóspedes deste ano, o Gora Kadan tem nota 9,5 de 10 em mais de 120 avaliações. Uma de setembro, de um casal no mesmo Standard Type B, fala do atendimento como excelente e da comida como uma das melhores que já provaram. O que mais aparece de ponto de atenção é o jantar: ele é longo e tem horário marcado, então a gente combina o horário com o hotel antes.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total da noite, com jantar e café da manhã</th></tr></thead>
+        <tbody>
+          <tr><td>Standard Type B<small>48 m² mais terraço e jardim de 20 m², banheira de madeira no quarto, futon, até 2 pessoas, reembolsável até 13 de fevereiro, só 1 disponível</small></td><td class="num">R$ 4.773</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>O jantar já está incluído</h3>
+    <p>Essa tarifa é de meia-pensão: inclui o jantar kaiseki, a refeição tradicional japonesa em vários pratos de temporada, e o café da manhã, servidos no quarto. Pra esse plano o check-in é até as 18h, e a gente combina o horário de chegada com o hotel. Vale contar com um jantar demorado e com horário marcado.</p>
+    <p class="note">Eu combino o transfer, os horários dos banhos e o jantar com antecedência, porque lá o inglês é limitado e táxis são raros. O Gora Kadan desta seção é o de Hakone, e não o Gora Kadan Fuji, que é outro hotel.</p>
+  </section>
+
+  <!-- TOQUIO 2 -->
+  <section class="stop">
+    <div class="stophead">
+      <div class="dates">17 a 21 de março · 4 noites · Tóquio</div>
+      <div class="hotel">THE KNOT TOKYO Shinjuku</div>
+    </div>
+    <img class="photo" src="img/knot.jpg" alt="Entrada do THE KNOT TOKYO Shinjuku à noite, com parede de tijolos e plantas">
+    <p>Fica em Nishi-Shinjuku, a 1 minuto do parque central e a 3 do prédio do governo metropolitano. O lounge tem galeria de arte, o restaurante é italiano e o hotel promove eventos locais, então é um fechamento com mais assunto do que o primeiro hotel de Tóquio. Os quartos são pequenos, mas a localização compensa.</p>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Quarto</th><th>Total, 4 noites, sem café</th></tr></thead>
+        <tbody>
+          <tr><td>Superior, cama de casal<small>16 m², reembolsável até 15 de março</small></td><td class="num">R$ 5.064</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="note">Existe uma versão do mesmo quarto por R$ 4.696, com limpeza a cada 3 dias. O voo sai às 22h20 do dia 21, depois do check-out das 11h. A gente combina guarda de malas ou um late check-out pra o último dia ficar leve.</p>
+  </section>
+
+  <!-- RESUMO -->
+  <section class="stop">
+    <h2>O resumo da hospedagem</h2>
+    <div class="tablewrap">
+      <table>
+        <thead><tr><th>Parada</th><th>Quarto</th><th>Café da manhã</th><th>Cancelamento grátis</th><th>Total</th></tr></thead>
+        <tbody>
+          <tr><td>Tóquio, 2 noites</td><td>Tokyu Stay Ginza, Superior Queen</td><td>vocês decidem lá</td><td>não reembolsável</td><td class="num">R$ 1.852</td></tr>
+          <tr><td>Myoko, 5 noites</td><td>Yunoyado Mochizuki, Duplo superior</td><td>incluído</td><td>até 15/02</td><td class="num">R$ 11.050</td></tr>
+          <tr><td>Kanazawa, 2 noites</td><td>Mitsui Garden, Superior King</td><td>vocês decidem lá</td><td>não reembolsável</td><td class="num">R$ 1.548</td></tr>
+          <tr><td>Kyoto, 5 noites</td><td>Nohga, Superior King</td><td>vocês decidem lá</td><td>até 06/03</td><td class="num">R$ 5.958</td></tr>
+          <tr><td>Osaka, 3 noites</td><td>Osaka Excel Tokyu, Superior Queen</td><td>vocês decidem lá</td><td>até 12/03</td><td class="num">R$ 2.334</td></tr>
+          <tr><td>Hakone, 1 noite</td><td>Gora Kadan, Standard Type B</td><td>incluído, com jantar</td><td>até 13/02</td><td class="num">R$ 4.773</td></tr>
+          <tr><td>Tóquio, 4 noites</td><td>THE KNOT, Superior</td><td>vocês decidem lá</td><td>até 15/03</td><td class="num">R$ 5.064</td></tr>
+          <tr class="total"><td colspan="4">Total dos 7 hotéis</td><td class="num">R$ 32.579</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p><b>Tokyu e Mitsui.</b> As tarifas escolhidas não são reembolsáveis, e por isso são as mais baratas. Se vocês preferirem poder cancelar, existe a versão reembolsável: cerca de R$ 290 a mais no Tokyu (até 13 de fevereiro) e cerca de R$ 395 a mais no Mitsui (até 2 de março).</p>
+    <p><b>Café da manhã.</b> Está incluído em Myoko e no Gora Kadan, que também inclui o jantar. Nos outros hotéis vocês decidem lá, direto no hotel ou em padarias e cafés.</p>
+    <p><b>Forma de pagamento.</b> Todos os hotéis podem ser pagos à Aflora em até 12x sem juros no cartão de crédito.</p>
+    <p class="note">Valores atualizados em 6 de novembro de 2026, com impostos e sujeitos à disponibilidade. Passagens, transfers, passeios e o fee da Aflora ficam fora desses números.</p>
+  </section>
+
+  <section class="todo">
+    <h2>O que a gente fecha com vocês</h2>
+    <ul>
+      <li>O quarto de Myoko. O Duplo luxo esgotou, e restam o Duplo superior (só 1) e o Duplo simples.</li>
+      <li>Se os sete quartos acima estão certos pra vocês. O Yunoyado e o Gora Kadan têm só 1 quarto cada, então são os primeiros a reservar.</li>
+      <li>Se querem a tarifa reembolsável no Tokyu e no Mitsui, por um pouco mais.</li>
+      <li>O aluguel de snowboard e o passe de lift do Alexandre: eu levanto as opções na vila, e preciso da altura e do tamanho de bota dele.</li>
+      <li>Se vale uma aula de snowboard no primeiro dia ou uma saída guiada fora da pista.</li>
+    </ul>
+  </section>
+
+</main>
+</body>
+</html>
