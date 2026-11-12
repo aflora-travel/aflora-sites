@@ -102,6 +102,16 @@ footer img { width: 110px; opacity: 0.55; display: block; }
 .dur { color: var(--suave); }
 .photolink { display: inline-block; margin-top: 22px; padding: 12px 22px; border: 1px solid var(--marrom); border-radius: 999px; color: var(--marrom); text-decoration: none; font-weight: 500; font-size: 0.9rem; letter-spacing: 0.04em; }
 .photolink:hover { background: var(--marrom); color: var(--creme); }
+.opt { font-size: 1.7rem; margin: 44px 0 6px; }
+.opt:first-of-type { margin-top: 0; }
+.optsub { color: var(--suave); max-width: 62ch; margin-bottom: 22px; }
+.trc { display: grid; gap: 0; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); border: 1px solid var(--creme-linha); border-radius: 14px; overflow: hidden; }
+.trc .gal { display: grid; grid-template-columns: 1fr 1fr; gap: 2px; background: var(--creme); }
+.trc .gal img { width: 100%; height: 100%; aspect-ratio: 1; object-fit: cover; display: block; }
+.trc .gal img:first-child { grid-column: 1 / -1; aspect-ratio: 16 / 10; }
+.trc .body { padding: 24px 24px 24px; display: flex; flex-direction: column; gap: 8px; }
+.trc h3 { font-size: 1.7rem; line-height: 1.1; }
+.trc ul { margin: 6px 0 0; padding-left: 18px; font-size: 0.9rem; }
 </style>
 </head>
 <body>
@@ -121,9 +131,11 @@ footer img { width: 110px; opacity: 0.55; display: block; }
     <div class="head">
       <div class="bar"></div>
       <span class="eyebrow">1. Hospedagem</span>
-      <h2>Fazenda São Francisco do Corumbau</h2>
-      <p>Três categorias para o mesmo período, com pensão completa: café da manhã, almoço e jantar. O restaurante e as instalações são exclusivos para hóspedes. Bebidas e petiscos são cobrados à parte.</p>
+      <h2>Duas opções de hospedagem</h2>
+      <p>Corumbau, para desligar de tudo, com pensão completa. Ou Trancoso, a pé do Quadrado, para ter praia e vida ao redor. Cada uma tem seus valores, e a escolha vai direto para o resumo no final.</p>
     </div>
+    <h3 class="opt">Opção 1: Corumbau</h3>
+    <p class="optsub">Fazenda São Francisco do Corumbau. Três categorias para o mesmo período, com pensão completa: café da manhã, almoço e jantar. O restaurante e as instalações são exclusivos para hóspedes. Bebidas e petiscos são cobrados à parte.</p>
     <div class="cards">
       <article class="card">
         <img src="suite-luxo-sede.jpg" alt="Suíte Luxo na Sede" loading="lazy">
@@ -180,6 +192,36 @@ footer img { width: 110px; opacity: 0.55; display: block; }
         <li>Cancelamento ou alteração de data: 10% até 31 dias antes do check-in, 20% de 30 a 16 dias antes e 30% a partir de 15 dias antes. O restante vira crédito de 6 meses, pessoal e intransferível.</li>
       </ul>
     </div>
+
+    <h3 class="opt">Opção 2: Trancoso</h3>
+    <p class="optsub">Pousada Capim Santo, no coração do Quadrado. Uma pousada charmosa, com piscina, spa e restaurante, avaliada com 9,6 de 10 por 72 hóspedes.</p>
+    <article class="trc">
+      <div class="gal">
+        <img src="capim-suite-especial.jpg" alt="Suíte Especial, Pousada Capim Santo" loading="lazy">
+        <img src="capim-quarto.jpg" alt="Quarto da Suíte Especial" loading="lazy">
+        <img src="capim-banheira.jpg" alt="Hidromassagem privativa" loading="lazy">
+        <img src="capim-banheiro.jpg" alt="Banheiro da suíte" loading="lazy">
+      </div>
+      <div class="body">
+        <span class="tag" style="font-size:0.72rem;letter-spacing:0.16em;text-transform:uppercase;color:var(--teal-esc);font-weight:500">Quadrado de Trancoso</span>
+        <h3>Suíte Especial</h3>
+        <p class="small">50 m², cama king com dossel, hidromassagem privativa, varanda, vista para o jardim, wi-fi e estacionamento incluídos. A 5 minutos a pé da Praça do Quadrado e 13 minutos da Praia dos Nativos.</p>
+        <div class="price old">R$ 19.455</div>
+        <div class="rows">
+          <div><span>Diária</span><span class="old">R$ 3.338</span></div>
+          <div><span>5 noites</span><span class="old">R$ 16.690</span></div>
+          <div><span>Impostos e taxas</span><span class="old">R$ 2.765</span></div>
+        </div>
+        <p class="small">Total com impostos e taxas, para o casal.</p>
+        <ul>
+          <li>Café da manhã incluso, em buffet. Almoço e jantar não estão inclusos.</li>
+          <li>Check-in das 14h às 23h e check-out até as 12h.</li>
+          <li>Tarifa não reembolsável, com pagamento pela Expedia.</li>
+          <li>Massagens e tratamentos de spa precisam ser reservados antes da viagem.</li>
+          <li>Poucas suítes disponíveis nas datas.</li>
+        </ul>
+      </div>
+    </article>
   </div>
 </section>
 
@@ -226,9 +268,11 @@ footer img { width: 110px; opacity: 0.55; display: block; }
     <div class="head">
       <div class="bar t"></div>
       <span class="eyebrow">3. Transfer</span>
-      <h2>De Porto Seguro até o Corumbau</h2>
-      <p>O hotel fica em uma ponta com acesso difícil, e o transfer faz parte da experiência. São quatro modelos privativos, com valores por trecho. O total considera ida e volta.</p>
+      <h2>De Porto Seguro até a pousada</h2>
+      <p>Os valores por trecho estão abaixo, e o total considera ida e volta.</p>
     </div>
+    <h3 class="opt">Opção 1: Corumbau</h3>
+    <p class="optsub">O hotel fica em uma ponta com acesso difícil, e o transfer faz parte da experiência. São quatro modelos privativos.</p>
     <div class="tablewrap">
       <table>
         <thead><tr><th>Modelo</th><th>Duração</th><th>Capacidade</th><th class="n">Por trecho</th><th class="n">Ida e volta</th></tr></thead>
@@ -247,6 +291,16 @@ footer img { width: 110px; opacity: 0.55; display: block; }
         <li>Na volta (voo às 17:50), o ideal é sair do hotel por volta das 11:30 para chegar com folga.</li>
         <li>O transfer aéreo tem limite de chegada até 16h30 e saída até 17h, sujeito ao clima.</li>
         <li>Valores aproximados, sujeitos a alteração e às políticas de cada prestador, que cobram direto.</li>
+      </ul>
+    </div>
+    <h3 class="opt">Opção 2: Trancoso</h3>
+    <div class="panel" style="max-width:640px">
+      <ul>
+        <li><b>Transfer da pousada:</b> cerca de 1h de carro desde o aeroporto de Porto Seguro.</li>
+        <li><b>Valor:</b> R$ 480 por veículo, por trecho, para até 2 pessoas. Ida e volta: R$ 960. Sujeito a sobretaxas.</li>
+        <li><b>Chegada:</b> com pouso às 10:20, chegam a Trancoso por volta do meio-dia, e o check-in é a partir das 14h.</li>
+        <li><b>Volta:</b> o voo é às 17:50, então o ideal é sair da pousada por volta das 13:30.</li>
+        <li><b>Como pedir:</b> a pousada organiza o transfer, com contato 72 horas antes da chegada.</li>
       </ul>
     </div>
   </div>
@@ -291,16 +345,22 @@ footer img { width: 110px; opacity: 0.55; display: block; }
     <div class="pick">
       <fieldset>
         <legend>Hospedagem</legend>
-        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" value="21667.8" data-l="Suíte Luxo na Sede" checked>Suíte Luxo na Sede<span class="v old">R$ 21.668</span></label>
-        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" value="23053.8" data-l="Suíte Luxo em Bangalô">Suíte Luxo em Bangalô<span class="v old">R$ 23.054</span></label>
-        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" value="29568" data-l="Bangalô Super Luxo">Bangalô Super Luxo<span class="v old">R$ 29.568</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" data-d="c" value="21667.8" data-l="Suíte Luxo na Sede" checked>Suíte Luxo na Sede<span class="v old">R$ 21.668</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" data-d="c" value="23053.8" data-l="Suíte Luxo em Bangalô">Suíte Luxo em Bangalô<span class="v old">R$ 23.054</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" data-d="c" value="29568" data-l="Bangalô Super Luxo">Bangalô Super Luxo<span class="v old">R$ 29.568</span></label>
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="h" data-d="t" value="19455" data-l="Capim Santo, Suíte Especial">Capim Santo, Suíte Especial (Trancoso)<span class="v old">R$ 19.455</span></label>
       </fieldset>
       <fieldset>
         <legend>Transfer (ida e volta)</legend>
+        <div id="trc">
         <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="2600" data-l="Transfer de carro" checked>Carro<span class="v old">R$ 2.600</span></label>
         <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="9000" data-l="Transfer de lancha">Lancha<span class="v old">R$ 9.000</span></label>
         <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="12000" data-l="Helicóptero R44">Helicóptero R44<span class="v old">R$ 12.000</span></label>
         <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="18000" data-l="Helicóptero H120">Helicóptero H120<span class="v old">R$ 18.000</span></label>
+        </div>
+        <div id="trt" style="display:none">
+        <label><input onchange="window.aflCalc&&window.aflCalc()" type="radio" name="t" value="960" data-l="Transfer da pousada">Transfer da pousada<span class="v old">R$ 960</span></label>
+        </div>
       </fieldset>
       <fieldset>
         <legend>Passagem aérea (2 pessoas)</legend>
@@ -328,7 +388,7 @@ footer img { width: 110px; opacity: 0.55; display: block; }
   <div class="inner">
     <span class="eyebrow">Próximo passo</span>
     <h2>Em seguida, os passeios</h2>
-    <p>Com hospedagem, transfer e voo definidos, a gente desenha os passeios e os momentos especiais dos cinco dias, no ritmo que combina com vocês. Estes são os que a região oferece, todos com parceiros locais e pagos direto a eles.</p>
+    <p>Com hospedagem, transfer e voo definidos, a gente desenha os passeios e os momentos especiais dos cinco dias, no ritmo que combina com vocês. Se a escolha for o Corumbau, estes são os passeios da região, todos com parceiros locais e pagos direto a eles. Para Trancoso, montamos uma lista própria.</p>
     <div class="two" style="margin-top:26px">
       <div class="panel" style="background:#fff">
         <h3>Por terra</h3>
@@ -361,11 +421,22 @@ footer img { width: 110px; opacity: 0.55; display: block; }
   var pagLabel = ['Pix', 'cartão à vista', 'cartão em até 3x'];
   var brl = function (n) { return n.toLocaleString('pt-BR', { style: 'currency', currency: 'BRL' }); };
   function val(name) { return document.querySelector('input[name="' + name + '"]:checked'); }
+  function sync() {
+    var dest = val('h').dataset.d, c = document.getElementById('trc'), t = document.getElementById('trt');
+    c.style.display = dest === 't' ? 'none' : '';
+    t.style.display = dest === 't' ? '' : 'none';
+    var cur = val('t');
+    if (!cur || !(dest === 't' ? t : c).contains(cur)) {
+      var first = (dest === 't' ? t : c).querySelector('input');
+      if (first) first.checked = true;
+    }
+  }
   function calc() {
+    sync();
     var h = val('h'), t = val('t'), b = val('b').value, p = +val('p').value;
     var hv = +h.value, tv = +t.value, fv = voo[b][p];
     var sub = hv + tv + fv, fee = Math.round(sub * 10) / 100;
-    document.getElementById('lh').textContent = h.dataset.l + ', 5 noites com ISS';
+    document.getElementById('lh').textContent = h.dataset.l + ', 5 noites com ' + (h.dataset.d === 't' ? 'impostos' : 'ISS');
     document.getElementById('lt').textContent = t.dataset.l + ', ida e volta';
     document.getElementById('lf').textContent = 'Passagem LATAM, ' + (b === 'com' ? 'com' : 'sem') + ' bagagem, ' + pagLabel[p];
     document.getElementById('vh').textContent = brl(hv);
