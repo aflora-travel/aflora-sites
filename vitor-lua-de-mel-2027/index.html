@@ -77,6 +77,35 @@ footer{padding:26px 0 40px;text-align:center;font-size:.8rem;font-weight:300}
   .body{padding:22px 20px 22px}
   section{padding-top:56px}
 }
+
+/* simulador */
+.fab{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--cacau);color:var(--creme-50);border:0;border-radius:999px;padding:15px 26px;font:500 .95rem var(--ff-body);cursor:pointer;box-shadow:0 8px 24px rgba(100,53,23,.3)}
+.fab:hover{background:#4f2a12}
+.btn{display:inline-block;background:var(--cacau);color:var(--creme-50);border:0;border-radius:999px;padding:14px 28px;font:500 1rem var(--ff-body);cursor:pointer;margin-top:22px}
+.btn.alt{background:var(--limao);color:var(--cacau)}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(100,53,23,.55);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.sheet{background:var(--creme-50);border-radius:24px;width:100%;max-width:780px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.sheet-head{display:flex;justify-content:space-between;align-items:flex-start;padding:24px 26px 8px}
+.sheet-head h2{font-size:2.1rem}
+.x{background:var(--creme);border:0;border-radius:50%;width:38px;height:38px;font-size:1.2rem;color:var(--cacau);cursor:pointer;flex:none}
+.sheet-body{overflow:auto;padding:8px 26px 18px}
+.grp{margin-top:18px}
+.grp h3{font-size:1.5rem;margin-bottom:4px}
+.grp .sub{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:2px solid var(--creme);border-radius:14px;padding:8px 14px 8px 8px;margin-bottom:8px;cursor:pointer;font:inherit;color:var(--cacau)}
+.opt img{width:64px;height:48px;object-fit:cover;border-radius:8px;flex:none}
+.opt .n{flex:1;font-weight:500;text-transform:lowercase}
+.opt .v{font-family:var(--ff-display);font-size:1.25rem;white-space:nowrap}
+.opt.on{border-color:var(--cacau);background:var(--creme)}
+.opt.none .n{font-weight:300}
+.sheet-foot{background:var(--creme);padding:16px 26px 20px;border-top:1px solid #e3d6c3}
+.sheet-foot .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.92rem;font-weight:300}
+.sheet-foot .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px}
+.sheet-foot .total span{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.sheet-foot .total strong{font-family:var(--ff-display);font-weight:400;font-size:2.6rem;line-height:1}
+.sheet-foot .fine{font-size:.8rem;margin-top:8px}
+@media (max-width:720px){.fab{left:16px;right:16px;text-align:center}.sheet-head h2{font-size:1.7rem}.opt img{width:52px;height:40px}.sheet-foot .total strong{font-size:2.1rem}}
 </style>
 </head>
 <body>
@@ -87,7 +116,7 @@ footer{padding:26px 0 40px;text-align:center;font-size:.8rem;font-weight:300}
     <p class="eyebrow">lua de mel · janeiro de 2027</p>
     <h1>praia e amazônia<br>na mesma viagem</h1>
     <p class="lead">uma seleção de acomodações pra vocês escolherem com calma: o mar de alagoas e a floresta perto de manaus, em dois hotéis pequenos, com muito conforto e pouca gente.</p>
-    <span class="pill">roteiro em construção</span>
+    <span class="pill">roteiro em construção</span><br><button class="btn" onclick="openSim()">monte sua combinação e veja o total</button>
   </div>
 </header>
 
@@ -227,6 +256,54 @@ footer{padding:26px 0 40px;text-align:center;font-size:.8rem;font-weight:300}
 </div>
 
 <footer>aflora · viagens sob medida</footer>
+
+
+<button class="fab" onclick="openSim()">monte sua combinação</button>
+
+<div class="modal" id="sim" onclick="if(event.target===this)closeSim()">
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="simulador">
+    <div class="sheet-head">
+      <div><p class="eyebrow">simulador</p><h2>monte sua viagem</h2></div>
+      <button class="x" onclick="closeSim()" aria-label="fechar">×</button>
+    </div>
+    <div class="sheet-body">
+      <div class="grp"><h3>na praia · reserva do patacho</h3><p class="sub">4 noites · 2 adultos</p><div id="opts-p"></div></div>
+      <div class="grp"><h3>na amazônia · uiara amazon resort</h3><p class="sub">3 noites · 2 adultos</p><div id="opts-u"></div></div>
+    </div>
+    <div class="sheet-foot">
+      <div class="row"><span id="l-p">praia: nenhuma</span><b id="v-p">R$ 0</b></div>
+      <div class="row"><span id="l-u">amazônia: nenhuma</span><b id="v-u">R$ 0</b></div>
+      <div class="total"><span>total da hospedagem</span><strong id="tot">R$ 0</strong></div>
+      <p class="fine">valores finais por casal, só hospedagem. passagens e traslados à parte. sujeito à confirmação de disponibilidade.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+var P=[["chalé reserva das conchas",11876,"conchas-1"],["bangalô hidro",13680,"hidro-1"],["chalé reserva da praia",14780,"praia-1"],["bangalô oásis",15484,"oasis-1"],["bangalô aquário",16928,"aquario-1"],["bangalô super aquário",19816,"superaquario-1"],["bangalô reserva do patacho",21260,"bangalo-1"]];
+var U=[["naïa premium",10359.32,"naia-1"],["sateré",6754.21,"satere-1"]];
+var sel={p:-1,u:-1};
+function brl(n){return "R$ "+Math.round(n).toLocaleString("pt-BR")}
+function build(id,list,key){
+  var h='<button class="opt none" data-k="'+key+'" data-i="-1"><span class="n">sem este trecho</span><span class="v">R$ 0</span></button>';
+  list.forEach(function(o,i){h+='<button class="opt" data-k="'+key+'" data-i="'+i+'"><img src="img/'+o[2]+'.jpg" alt=""><span class="n">'+o[0]+'</span><span class="v">'+brl(o[1])+'</span></button>'});
+  document.getElementById(id).innerHTML=h;
+}
+build("opts-p",P,"p");build("opts-u",U,"u");
+function upd(){
+  var p=sel.p>-1?P[sel.p]:null,u=sel.u>-1?U[sel.u]:null;
+  document.getElementById("l-p").textContent="praia: "+(p?p[0]:"nenhuma");
+  document.getElementById("l-u").textContent="amazônia: "+(u?u[0]:"nenhuma");
+  document.getElementById("v-p").textContent=brl(p?p[1]:0);
+  document.getElementById("v-u").textContent=brl(u?u[1]:0);
+  document.getElementById("tot").textContent=brl((p?p[1]:0)+(u?u[1]:0));
+  document.querySelectorAll(".opt").forEach(function(b){b.classList.toggle("on",+b.dataset.i===sel[b.dataset.k])});
+}
+document.getElementById("sim").addEventListener("click",function(e){var b=e.target.closest(".opt");if(!b)return;sel[b.dataset.k]=+b.dataset.i;upd()});
+function openSim(){document.getElementById("sim").classList.add("open");document.body.style.overflow="hidden";upd()}
+function closeSim(){document.getElementById("sim").classList.remove("open");document.body.style.overflow=""}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeSim()});
+</script>
 
 </body>
 </html>
