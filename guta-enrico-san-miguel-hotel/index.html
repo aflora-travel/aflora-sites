@@ -1,0 +1,326 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>El Golpe de Vista | San Miguel de Allende | Aflora</title>
+<meta name="description" content="Nossa sugestão de hotel em San Miguel de Allende para a virada do ano da Guta, do Enrico e dos meninos.">
+<link rel="icon" href="img/carimbo.png">
+<style>
+@font-face{font-family:"Boston Angel";src:url("fonts/Boston_Angel_Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Light.otf") format("opentype");font-weight:300;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Bold.otf") format("opentype");font-weight:700;font-display:swap}
+
+:root{
+  --cacau:#643517; --creme:#EFE6DA; --creme-50:#FBF8F2; --limao:#CBCC00; --coral:#FD963A; --salva:#B7E0DE; --sol:#FAFA68;
+  --ff-display:"Boston Angel","Cormorant Garamond",Georgia,serif;
+  --ff-body:"Futura Std","Futura","Avenir Next","Helvetica Neue",system-ui,sans-serif;
+  --r-md:12px; --r-lg:20px; --r-xl:32px;
+  --shadow-2:0 6px 16px rgba(100,53,23,.08),0 2px 4px rgba(100,53,23,.04);
+  --shadow-3:0 18px 40px rgba(100,53,23,.12),0 6px 12px rgba(100,53,23,.06);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--creme-50);color:var(--cacau);font-family:var(--ff-body);font-weight:400;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:var(--cacau)}
+h1,h2,h3{font-family:var(--ff-display);font-weight:400;text-transform:lowercase;letter-spacing:-.02em;line-height:1.05;margin:0;color:var(--cacau)}
+.eyebrow{font-weight:500;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cacau);margin:0 0 14px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+section{padding:72px 0}
+section.tint{background:var(--creme)}
+h2{font-size:clamp(2.1rem,5.4vw,3.2rem);margin-bottom:18px}
+h3{font-size:1.6rem;margin-bottom:8px}
+.lead{font-size:1.15rem;font-weight:300;max-width:62ch}
+
+/* topo */
+.top{padding:22px 0 0}
+.top img{height:34px;width:auto}
+
+/* hero */
+.hero{padding:26px 0 0}
+.hero-photo{position:relative;border-radius:var(--r-xl);overflow:hidden;box-shadow:var(--shadow-3);aspect-ratio:16/8;background:var(--creme)}
+.hero-photo img{width:100%;height:100%;object-fit:cover}
+.hero-copy{padding:36px 0 8px}
+.hero-copy h1{font-size:clamp(3rem,10vw,6rem);margin-bottom:16px}
+.pills{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.pill{background:var(--limao);color:var(--cacau);font-weight:500;font-size:.86rem;padding:8px 16px;border-radius:999px}
+.pill.alt{background:var(--creme);}
+
+/* fatos */
+.facts{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:34px}
+.fact{background:var(--creme);border-radius:var(--r-lg);padding:20px}
+.fact b{display:block;font-family:var(--ff-display);font-weight:400;font-size:2rem;line-height:1;margin-bottom:6px}
+.fact span{font-size:.92rem}
+
+/* motivos */
+.reasons{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-top:34px}
+.reason{background:var(--creme-50);border-radius:var(--r-lg);padding:26px;box-shadow:var(--shadow-2)}
+.reason .n{font-family:var(--ff-display);font-size:2.4rem;color:var(--coral);line-height:1;margin-bottom:10px}
+.reason p{margin:0;font-size:.98rem}
+
+/* galeria */
+.gal{columns:3;column-gap:14px;margin-top:30px}
+.gal button{display:block;width:100%;padding:0;margin:0 0 14px;border:0;background:none;cursor:zoom-in;border-radius:var(--r-md);overflow:hidden;break-inside:avoid}
+.gal img{width:100%;height:auto;transition:transform .5s cubic-bezier(.16,1,.3,1)}
+.gal button:hover img{transform:scale(1.03)}
+
+/* quartos */
+.rooms{display:grid;grid-template-columns:1.2fr 1fr;gap:26px;align-items:start;margin-top:30px}
+.room-photos{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.room-photos button{padding:0;border:0;background:none;cursor:zoom-in;border-radius:var(--r-md);overflow:hidden}
+.room-photos button:first-child{grid-column:1/-1}
+.room-photos img{width:100%;height:100%;object-fit:cover}
+.room-photos button:first-child img{aspect-ratio:3/2}
+.room-photos button:not(:first-child) img{aspect-ratio:1/1}
+.card{background:var(--creme-50);border-radius:var(--r-lg);padding:28px;box-shadow:var(--shadow-2)}
+.tint .card{background:var(--creme-50)}
+ul.ticks{list-style:none;padding:0;margin:14px 0 0}
+ul.ticks li{padding:7px 0 7px 28px;position:relative;border-bottom:1px solid rgba(100,53,23,.12)}
+ul.ticks li:last-child{border-bottom:0}
+ul.ticks li:before{content:"";position:absolute;left:2px;top:15px;width:12px;height:12px;border-radius:50%;background:var(--limao)}
+.note{background:var(--sol);border-radius:var(--r-md);padding:16px 18px;margin-top:20px;font-size:.96rem}
+
+/* local */
+.local{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px}
+.walk{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding:13px 0;border-bottom:1px solid rgba(100,53,23,.14)}
+.walk:last-of-type{border-bottom:0}
+.walk b{font-family:var(--ff-display);font-weight:400;font-size:1.7rem;white-space:nowrap}
+.btn{display:inline-block;margin-top:18px;background:var(--cacau);color:var(--creme);text-decoration:none;font-weight:500;padding:13px 24px;border-radius:999px;transition:transform .26s cubic-bezier(.16,1,.3,1)}
+.btn:hover{transform:translateY(-2px)}
+.view{border-radius:var(--r-lg);overflow:hidden;min-height:260px;max-height:400px}
+.view img{width:100%;height:100%;object-fit:cover}
+
+/* avaliações */
+.scores{display:grid;grid-template-columns:1.1fr repeat(4,1fr);gap:14px;margin:30px 0}
+.score{background:var(--creme-50);border-radius:var(--r-lg);padding:20px;text-align:center}
+.score b{display:block;font-family:var(--ff-display);font-weight:400;font-size:2.6rem;line-height:1}
+.score span{font-size:.86rem}
+.score.big{background:var(--cacau);color:var(--creme)}
+.score.big b{color:var(--creme);font-size:3.6rem}
+.quotes{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}
+.quote{background:var(--creme-50);border-radius:var(--r-lg);padding:24px}
+.quote p{margin:0 0 12px;font-size:1rem}
+.quote small{font-weight:500;font-size:.8rem;letter-spacing:.06em}
+
+/* valores */
+.price{display:grid;grid-template-columns:1fr 1fr;gap:26px;margin-top:30px;align-items:stretch}
+.total{background:var(--cacau);color:var(--creme);border-radius:var(--r-xl);padding:34px}
+.total .eyebrow,.total h3,.total p{color:var(--creme)}
+.total .big{font-family:var(--ff-display);font-size:clamp(3rem,8vw,4.6rem);line-height:1;margin:8px 0 6px}
+.total .small{font-size:.92rem;font-weight:300}
+.line{display:flex;justify-content:space-between;gap:14px;padding:12px 0;border-bottom:1px solid rgba(239,230,218,.25)}
+.line:last-child{border-bottom:0}
+.tbl .line{border-bottom:1px solid rgba(100,53,23,.14)}
+
+footer{padding:60px 0 70px;text-align:center}
+footer img.stamp{width:110px;margin:0 auto 18px}
+footer p{margin:6px 0}
+
+/* lightbox */
+.lb{position:fixed;inset:0;background:rgba(251,248,242,.97);display:none;align-items:center;justify-content:center;z-index:50;padding:24px}
+.lb.on{display:flex}
+.lb img{max-width:min(94vw,1200px);max-height:88vh;border-radius:var(--r-md);box-shadow:var(--shadow-3)}
+.lb button{position:absolute;top:18px;right:22px;border:0;background:var(--cacau);color:var(--creme);width:44px;height:44px;border-radius:50%;font-size:1.4rem;cursor:pointer;font-family:var(--ff-body)}
+
+@media(max-width:860px){
+  section{padding:54px 0}
+  .facts{grid-template-columns:repeat(2,1fr)}
+  .reasons{grid-template-columns:1fr}
+  .gal{columns:2}
+  .rooms,.local,.price{grid-template-columns:1fr}
+  .scores{grid-template-columns:1fr 1fr}
+  .score.big{grid-column:1/-1}
+  .quotes{grid-template-columns:1fr}
+  .hero-photo{aspect-ratio:4/3}
+}
+@media(max-width:480px){body{font-size:16px}.gal{columns:1}}
+</style>
+</head>
+<body>
+
+<header class="top"><div class="wrap"><img src="img/aflora-logo.png" alt="aflora"></div></header>
+
+<main>
+<section class="hero" style="padding-top:26px">
+  <div class="wrap">
+    <div class="hero-photo"><img src="img/hero.jpg" alt="Lavanda em primeiro plano e a torre da igreja de San Miguel de Allende ao fundo"></div>
+    <div class="hero-copy">
+      <p class="eyebrow">san miguel de allende · 30 de dezembro a 1 de janeiro</p>
+      <h1>el golpe de vista</h1>
+      <p class="lead">Guta, Enrico, Téo e Tom: esse é o hotel que a gente escolheu para a virada do ano. Uma casa antiga de pedra, com pátio, terraço, lareira no quarto e vista de telhados e igreja. Aqui vai tudo o que você precisa para dizer sim.</p>
+      <div class="pills">
+        <span class="pill">2 noites</span>
+        <span class="pill">café da manhã incluído</span>
+        <span class="pill">estacionamento com manobrista incluído</span>
+        <span class="pill alt">nota 9,6 em 99 avaliações</span>
+      </div>
+    </div>
+    <div class="facts">
+      <div class="fact"><b>30 dez</b><span>check-in a partir das 15h, até as 23h</span></div>
+      <div class="fact"><b>1 jan</b><span>check-out até o meio-dia</span></div>
+      <div class="fact"><b>9 min</b><span>a pé até o Parque Juárez</span></div>
+      <div class="fact"><b>2 quartos</b><span>Deluxe Suite, cama king</span></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">por que ele</p>
+    <h2>seis motivos para esse ser o hotel certo</h2>
+    <p class="lead">Vocês pediram um hotel central, que não seja nem muito reservado nem muito luxo, com cara de San Miguel. Esse é o que melhor responde a isso dentro do orçamento de hospedagem.</p>
+    <div class="reasons">
+      <div class="reason"><div class="n">1</div><h3>casa de pedra, com alma</h3><p>Entrada de pedra e portas de madeira, um pátio interno com claraboia e arcos entalhados. Parece uma casa colonial bem cuidada, não um hotel de rede.</p></div>
+      <div class="reason"><div class="n">2</div><h3>vista de San Miguel</h3><p>Do terraço e das varandas dá para ver os telhados coloridos e a torre da igreja. É o tipo de vista que combina com a virada do ano.</p></div>
+      <div class="reason"><div class="n">3</div><h3>lareira e banheira</h3><p>A Deluxe Suite tem lareira no quarto e banheira de imersão. Em dezembro San Miguel esfria à noite, e isso muda a viagem.</p></div>
+      <div class="reason"><div class="n">4</div><h3>atendimento de verdade</h3><p>Serviço com nota 9,6 e limpeza com nota 10. Hóspedes comentam o atendimento personalizado, até por WhatsApp, e a equipe atenta mesmo com a barreira do idioma.</p></div>
+      <div class="reason"><div class="n">5</div><h3>o que já vem incluído</h3><p>Café da manhã, Wi-Fi, estacionamento com manobrista e elevador. Com o carro de vocês, isso resolve a logística do hotel.</p></div>
+      <div class="reason"><div class="n">6</div><h3>tranquilo e bem localizado</h3><p>Fica a uma caminhada do centro e, segundo os hóspedes, é calmo. Dá para curtir a cidade a pé e voltar para um lugar sossegado.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">fotos</p>
+    <h2>dá uma olhada por dentro</h2>
+    <div class="gal" id="gal">
+      <button data-i="0"><img src="img/patio.jpg" alt="Pátio interno com claraboia, arcos e lanternas" loading="lazy"></button>
+      <button data-i="1"><img src="img/terraco.jpg" alt="Terraço com mesas e vista da cidade" loading="lazy"></button>
+      <button data-i="2"><img src="img/entrada.jpg" alt="Entrada de pedra com porta de madeira" loading="lazy"></button>
+      <button data-i="3"><img src="img/quarto-lareira.jpg" alt="Quarto do hotel com lareira e televisão" loading="lazy"></button>
+      <button data-i="4"><img src="img/varanda.jpg" alt="Varanda com vista para a rua e os telhados" loading="lazy"></button>
+      <button data-i="5"><img src="img/arco.jpg" alt="Arco de pedra entalhada e sala de estar" loading="lazy"></button>
+      <button data-i="6"><img src="img/noite.jpg" alt="Terraço iluminado à noite" loading="lazy"></button>
+      <button data-i="7"><img src="img/detalhe.jpg" alt="Detalhe da arquitetura com vista da igreja pela janela" loading="lazy"></button>
+      <button data-i="8"><img src="img/banheiro.jpg" alt="Banheiro com banheira de imersão e chuveiro" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">os quartos</p>
+    <h2>deluxe suite, para dois</h2>
+    <div class="rooms">
+      <div class="room-photos">
+        <button data-src="img/quarto-sofa.jpg"><img src="img/quarto-sofa.jpg" alt="Deluxe Suite com cama king e sofá" loading="lazy"></button>
+        <button data-src="img/lareira.jpg"><img src="img/lareira.jpg" alt="Lareira de pedra e poltronas no quarto" loading="lazy"></button>
+        <button data-src="img/cama.jpg"><img src="img/cama.jpg" alt="Cama king com cabeceira estofada" loading="lazy"></button>
+      </div>
+      <div>
+        <div class="card">
+          <h3>o que tem no quarto</h3>
+          <ul class="ticks">
+            <li>1 cama king, acomoda 2 pessoas</li>
+            <li>Lareira e televisão</li>
+            <li>Banheira de imersão</li>
+            <li>Vista da cidade</li>
+            <li>Café da manhã incluído</li>
+            <li>Wi-Fi grátis e ar-condicionado</li>
+            <li>Acesso ao spa como opcional, com custo à parte</li>
+          </ul>
+        </div>
+        <p style="font-size:.88rem;margin:14px 0 0">Fotos do hotel. A decoração varia um pouco entre os quartos.</p>
+        <div class="note"><b>Sobre as camas:</b> todos os quartos do hotel são com cama king, e não há opção de camas de solteiro separadas. Para o Téo e o Tom, isso quer dizer dividir a cama king de um dos quartos. Se preferirem camas separadas para os meninos, conversa com a gente que a gente mostra outra opção de hotel.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">localização</p>
+    <h2>no coração de san miguel</h2>
+    <p class="lead">O hotel fica na Prolongación de Aldama, no centro histórico. Dá para sair a pé para jantar, conhecer a Parroquia e voltar sem pegar o carro.</p>
+    <div class="local">
+      <div class="card">
+        <div class="walk"><span>Parque Juárez</span><b>9 min a pé</b></div>
+        <div class="walk"><span>Jardim Allende</span><b>15 min a pé</b></div>
+        <div class="walk"><span>Parroquia de San Miguel Arcángel</span><b>15 min a pé</b></div>
+        <p style="font-size:.92rem;margin:14px 0 0">Tempos a pé calculados até cada ponto. Com o carro de vocês, o manobrista do hotel cuida do estacionamento.</p>
+        <a class="btn" href="https://www.google.com/maps/search/?api=1&query=El+Golpe+de+Vista+San+Miguel+de+Allende" target="_blank" rel="noopener">ver no mapa</a>
+      </div>
+      <div class="view"><img src="img/varanda.jpg" alt="Vista da varanda para a rua e a igreja de San Miguel" loading="lazy"></div>
+    </div>
+  </div>
+</section>
+
+<section class="tint">
+  <div class="wrap">
+    <p class="eyebrow">avaliações</p>
+    <h2>o que dizem os hóspedes</h2>
+    <div class="scores">
+      <div class="score big"><b>9,6</b><span>nota geral, extraordinária<br>99 avaliações verificadas</span></div>
+      <div class="score"><b>10</b><span>limpeza</span></div>
+      <div class="score"><b>9,8</b><span>condições e instalações</span></div>
+      <div class="score"><b>9,6</b><span>serviço e equipe</span></div>
+      <div class="score"><b>9,6</b><span>comodidades</span></div>
+    </div>
+    <div class="quotes">
+      <div class="quote"><p>Hotel boutique lindo, bem localizado e calmo, com atendimento personalizado até por WhatsApp. O hóspede já quer voltar.</p><small>MICHAEL · VIAGEM A DOIS · OUT 2026</small></div>
+      <div class="quote"><p>A recepcionista ajudou muito, mesmo com a barreira do idioma, e a equipe de quarto foi rápida em tudo.</p><small>JUAN PABLO · VIAGEM A DOIS · OUT 2026</small></div>
+      <div class="quote"><p>Serviço e comida do restaurante muito bons, e uma vista excepcional.</p><small>FLORENT · AGO 2026</small></div>
+      <div class="quote"><p>Estadia muito agradável, serviço magnífico e ótima localização.</p><small>JAIME · JUL 2026</small></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <p class="eyebrow">valores</p>
+    <h2>quanto fica</h2>
+    <div class="price">
+      <div class="total">
+        <p class="eyebrow">2 quartos · 2 noites</p>
+        <div class="big">R$ 11.931</div>
+        <p class="small">Total com impostos e taxas, de 30 de dezembro a 1 de janeiro.</p>
+        <div style="margin-top:20px">
+          <div class="line"><span>Por quarto, nas 2 noites</span><b>R$ 5.966</b></div>
+          <div class="line"><span>Por quarto, por noite</span><b>R$ 2.983</b></div>
+        </div>
+      </div>
+      <div class="card tbl">
+        <h3>o que está incluído</h3>
+        <ul class="ticks">
+          <li>Café da manhã</li>
+          <li>Estacionamento com manobrista</li>
+          <li>Wi-Fi e ar-condicionado</li>
+          <li>Impostos e taxas</li>
+        </ul>
+        <div class="note" style="margin-top:20px"><b>Atenção:</b> restam só 2 quartos dessa categoria para as nossas datas, que são exatamente os 2 de que vocês precisam. O reembolso é total até 28 de dezembro, sem custo adicional. Os valores são de hoje e podem mudar até a reserva.</div>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <img class="stamp" src="img/carimbo.png" alt="">
+    <h2 style="font-size:2.2rem">gostou? conversa com a gente.</h2>
+    <p>É só responder no nosso WhatsApp que a gente reserva.</p>
+    <p style="font-size:.85rem;font-weight:300;margin-top:22px">travel beyond the obvious · aflora</p>
+  </div>
+</footer>
+
+<div class="lb" id="lb" role="dialog" aria-label="Foto ampliada"><button aria-label="Fechar">×</button><img alt=""></div>
+
+<script>
+(function(){
+  var lb=document.getElementById('lb'),im=lb.querySelector('img');
+  function open(src,alt){im.src=src;im.alt=alt||'';lb.classList.add('on')}
+  function close(){lb.classList.remove('on')}
+  document.querySelectorAll('.gal button,.room-photos button').forEach(function(b){
+    b.addEventListener('click',function(){var i=b.querySelector('img');open(i.getAttribute('src'),i.alt)})
+  });
+  lb.addEventListener('click',close);
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')close()});
+})();
+</script>
+</body>
+</html>
