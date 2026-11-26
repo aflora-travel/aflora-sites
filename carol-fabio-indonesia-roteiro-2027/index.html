@@ -1,0 +1,342 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>carol e fábio na indonésia</title>
+<meta name="description" content="Uma primeira ideia de roteiro para a lua de mel de Carol e Fábio, de 20 de abril a 6 de maio de 2027.">
+<style>
+@font-face{font-family:"Boston Angel";src:url("fonts/Boston_Angel_Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Light.otf") format("opentype");font-weight:300;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Medium.otf") format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Bold.otf") format("opentype");font-weight:700;font-display:swap}
+
+:root{
+  --cacau:#643517; --creme:#EFE6DA; --creme-50:#FBF8F2; --limao:#CBCC00; --coral:#FD963A; --salva:#B7E0DE; --magenta:#FF2E86; --sol:#FAFA68;
+  --bg:var(--creme-50); --bg-alt:var(--creme); --fg:var(--cacau); --muted:#8A5A3A; --line:rgba(100,53,23,.18); --card:#FFFFFF; --accent-text:#8A4A12;
+  --ff-display:"Boston Angel","Cormorant Garamond",Georgia,serif;
+  --ff-body:"Futura Std","Futura","Avenir Next","Century Gothic",system-ui,sans-serif;
+  --r-md:12px; --r-lg:20px; --r-xl:32px;
+  --shadow:0 18px 40px rgba(100,53,23,.12),0 6px 12px rgba(100,53,23,.06);
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#3B1F0D;--bg-alt:#4A2710;--fg:#EFE6DA;--muted:#D6BFA6;--line:rgba(239,230,218,.2);--card:#4A2710;--accent-text:#FAFA68;color-scheme:dark}
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.6 var(--ff-body);-webkit-font-smoothing:antialiased}
+img{max-width:100%;display:block}
+a{color:inherit}
+.wrap{max-width:1080px;margin:0 auto;padding-inline:max(20px,env(safe-area-inset-left,0px))}
+.eyebrow{font:500 12px/1.2 var(--ff-body);letter-spacing:.22em;text-transform:uppercase}
+h1,h2,h3{font-family:var(--ff-display);font-weight:400;text-transform:lowercase;letter-spacing:-.01em;line-height:1.05;margin:0;text-wrap:balance}
+
+/* capa */
+.hero{position:relative;min-height:92svh;display:flex;flex-direction:column;justify-content:space-between;color:var(--creme);
+  background:#4A2710 url("https://images.unsplash.com/photo-1619880889144-d6e252999afa?w=2000&q=80&auto=format&fit=crop") center/cover no-repeat}
+.hero::before{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(74,39,16,.6) 0%,rgba(74,39,16,.2) 28%,rgba(74,39,16,.62) 55%,rgba(74,39,16,.92) 100%)}
+.hero>*{position:relative}
+.hero .wrap{width:100%}
+.hero .logo{width:clamp(110px,18vw,160px);margin-top:clamp(24px,5vw,44px)}
+.hero .bottom{padding-bottom:clamp(40px,8vw,88px)}
+.hero h1{font-size:clamp(46px,10vw,112px);margin:16px 0 14px;color:var(--creme)}
+.hero .sub{font:300 clamp(18px,2.6vw,24px)/1.4 var(--ff-body);max-width:34ch;color:var(--creme)}
+.hero .eyebrow{color:var(--sol);text-shadow:0 1px 8px rgba(43,23,9,.6)}
+
+section{padding-block:clamp(56px,9vw,104px)}
+.intro{max-width:760px}
+.intro h2{font-size:clamp(34px,6vw,60px);margin-bottom:22px}
+.intro p{font-size:clamp(18px,2.2vw,21px);font-weight:300;margin:0 0 1em}
+
+/* trajeto */
+.overview{background:var(--bg-alt)}
+.overview h2{font-size:clamp(30px,5vw,48px);margin-bottom:28px}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:12px;grid-template-columns:repeat(auto-fit,minmax(150px,1fr))}
+.steps li{background:var(--card);border-radius:var(--r-md);padding:16px 16px 14px;box-shadow:0 1px 2px rgba(100,53,23,.06);border-top:4px solid var(--c,var(--coral))}
+.steps b{display:block;font:400 24px/1.1 var(--ff-display);text-transform:lowercase;margin-bottom:6px}
+.steps span{display:block;font-size:14px;color:var(--muted)}
+.steps .n{font:500 12px var(--ff-body);letter-spacing:.14em;text-transform:uppercase;color:var(--accent-text);margin-bottom:8px}
+.steps b{overflow-wrap:anywhere}
+@media(min-width:1000px){.steps{grid-template-columns:repeat(7,1fr)}}
+.total{margin-top:22px;color:var(--muted);font-size:15px}
+
+/* paradas */
+.stop{border-top:1px solid var(--line)}
+.stop:nth-of-type(odd){background:var(--bg)}
+.stop:nth-of-type(even){background:var(--bg-alt)}
+.stop .grid{display:grid;gap:clamp(24px,5vw,56px);align-items:start}
+@media(min-width:860px){.stop .grid{grid-template-columns:1.05fr 1fr}.stop.flip .grid{grid-template-columns:1fr 1.05fr}.stop.flip .photos{order:2}}
+.photos{display:grid;gap:12px;grid-template-columns:1fr 1fr}
+.photos img{width:100%;height:100%;object-fit:cover;border-radius:var(--r-lg);background:var(--creme);box-shadow:var(--shadow)}
+.photos .big{grid-column:1 / -1;aspect-ratio:4/3}
+.photos .sm{aspect-ratio:1/1}
+.when{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin-bottom:14px;color:var(--accent-text)}
+.pill{display:inline-block;border-radius:999px;padding:5px 12px;font:500 12px/1 var(--ff-body);letter-spacing:.1em;text-transform:uppercase;background:var(--c,var(--limao));color:#4A2710}
+.stop h2{font-size:clamp(38px,6.5vw,68px);margin-bottom:16px}
+.stop p{margin:0 0 1em;font-weight:300}
+.stop ul{margin:0 0 1.3em;padding:0;list-style:none}
+.stop li{position:relative;padding-left:22px;margin:0 0 .55em;font-weight:300}
+.stop li::before{content:"";position:absolute;left:2px;top:.62em;width:8px;height:8px;border-radius:50%;background:var(--c,var(--coral))}
+.hotel{margin-top:22px;background:var(--card);border-radius:var(--r-lg);padding:20px 22px;box-shadow:var(--shadow);border-left:6px solid var(--c,var(--coral))}
+.hotel .eyebrow{color:var(--accent-text);margin-bottom:8px}
+.hotel h3{font-size:30px;margin-bottom:8px}
+.hotel p{margin:0;font-size:16px}
+.hotel.pending{box-shadow:none;border:1px dashed var(--line);border-left:6px solid var(--line);background:transparent}
+
+/* fechamento */
+.next{background:var(--cacau);color:var(--creme);text-align:center}
+.next h2{font-size:clamp(34px,6vw,60px);margin-bottom:18px}
+.next ul{list-style:none;padding:0;margin:0 auto 28px;max-width:560px;text-align:left;font-weight:300}
+.next li{padding:10px 0;border-bottom:1px solid rgba(239,230,218,.25)}
+.next .carimbo{width:92px;margin:0 auto 22px;background:var(--creme);border-radius:var(--r-lg);padding:12px}
+.next a.btn{display:inline-block;background:var(--limao);color:#4A2710;text-decoration:none;font:500 15px var(--ff-body);letter-spacing:.06em;border-radius:999px;padding:14px 26px;margin-top:6px}
+footer{background:var(--cacau);color:var(--creme);padding:0 0 calc(40px + env(safe-area-inset-bottom,0px));text-align:center}
+footer img{width:110px;margin:0 auto 14px}
+footer small{display:block;font-size:12px;opacity:.75}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap"><img class="logo" src="img/logo-creme.png" alt="aflora"></div>
+  <div class="wrap bottom">
+    <div class="eyebrow">lua de mel · 20 de abril a 6 de maio de 2027</div>
+    <h1>carol &amp; fábio, na indonésia</h1>
+    <p class="sub">uma primeira ideia de roteiro, pra gente conversar.</p>
+  </div>
+</header>
+
+<section>
+  <div class="wrap intro">
+    <h2>o que a gente ouviu de vocês</h2>
+    <p>luxo acessível, zero perrengue, um pouco de cidade, um pouco de cultura e relax sem passar o dia deitados. dois viajantes rápidos, que gostam de entender o lugar antes de explorar sozinhos.</p>
+    <p>desenhamos 16 noites que começam ligeiras em singapura, passam por bali e uluwatu, descansam numa ilha sem carros e fecham num barco pelas ilhas de komodo. hotéis pequenos e charmosos pesam mais do que passeios caros, como vocês pediram.</p>
+  </div>
+</section>
+
+<section class="overview">
+  <div class="wrap">
+    <h2>o trajeto em um olhar</h2>
+    <ol class="steps">
+      <li style="--c:var(--salva)"><div class="n">20 a 23/04</div><b>singapura</b><span>3 noites</span></li>
+      <li style="--c:var(--limao)"><div class="n">23 a 26/04</div><b>ubud</b><span>3 noites</span></li>
+      <li style="--c:var(--coral)"><div class="n">26 a 29/04</div><b>uluwatu</b><span>3 noites</span></li>
+      <li style="--c:var(--salva)"><div class="n">29/04 a 02/05</div><b>gili meno</b><span>3 noites</span></li>
+      <li style="--c:var(--sol)"><div class="n">02 a 03/05</div><b>labuan bajo</b><span>1 noite</span></li>
+      <li style="--c:var(--magenta)"><div class="n">03 a 05/05</div><b>barco em komodo</b><span>2 noites</span></li>
+      <li style="--c:var(--coral)"><div class="n">05 a 06/05</div><b>seminyak</b><span>1 noite, voo à noite</span></li>
+    </ol>
+    <p class="total">16 noites no total. as datas seguem a ida e a volta que a gente está fechando.</p>
+  </div>
+</section>
+
+<!-- singapura -->
+<section class="stop" style="--c:var(--salva)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1525625293386-3f8f99389edd?w=1400&q=80&auto=format&fit=crop" alt="Marina Bay Sands e a baía de Singapura">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1508964942454-1a56651d54ac?w=800&q=80&auto=format&fit=crop" alt="passarela entre os supertrees dos Gardens by the Bay">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1572148884483-794c9b6c6963?w=800&q=80&auto=format&fit=crop" alt="Marina Bay Sands à noite">
+    </div>
+    <div>
+      <div class="when"><span class="pill">20 a 23 de abril</span><span class="eyebrow">3 noites</span></div>
+      <h2>singapura</h2>
+      <p>vocês chegam à noite, então os dias cheios são 21 e 22. dá para sentir a cidade sem correr, do jeito que vocês gostam.</p>
+      <ul>
+        <li>um free walking tour logo no primeiro dia, como vocês fazem em toda cidade nova.</li>
+        <li>gardens by the bay e a baía de marina bay, com o fim de tarde nos supertrees.</li>
+        <li>hawker centres para comer bem e barato, de maxwell a lau pa sat.</li>
+        <li>chinatown, little india e o jardim botânico, que é patrimônio da unesco.</li>
+        <li>em abril as tardes costumam ter trovoada, então a gente deixa as manhãs para a rua e as tardes para lugares cobertos.</li>
+      </ul>
+      <div class="hotel pending">
+        <div class="eyebrow">hotel</div>
+        <h3>a definir</h3>
+        <p>ainda estamos escolhendo o hotel de singapura, e a ideia é um endereço bem localizado, pequeno e com personalidade.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ubud -->
+<section class="stop flip" style="--c:var(--limao)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1559628233-100c798642d4?w=1400&q=80&auto=format&fit=crop" alt="arrozais em terraços vistos de cima, em Ubud">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1633820313053-fa030b13ef94?w=800&q=80&auto=format&fit=crop" alt="arrozal verde cercado de coqueiros">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1559628233-eb1b1a45564b?w=800&q=80&auto=format&fit=crop" alt="terraços de arroz em meio à floresta">
+    </div>
+    <div>
+      <div class="when"><span class="pill">23 a 26 de abril</span><span class="eyebrow">3 noites</span></div>
+      <h2>ubud</h2>
+      <p>um voo curto de singapura e vocês estão no lado verde e tranquilo de bali. é aqui que entra o dia de curadoria cultural, com guia, para entender os templos, os arrozais e como a ilha vive.</p>
+      <ul>
+        <li>um dia inteiro com guia pela bali cultural e natural, com almoço.</li>
+        <li>campuhan ridge walk ao amanhecer, antes do calor.</li>
+        <li>banho de flores a dois no karsa spa, que merece reserva com antecedência.</li>
+        <li>jantar no locavore nxt ou no mozaic, e café no seniman.</li>
+      </ul>
+      <div class="hotel">
+        <div class="eyebrow">hotel sugerido</div>
+        <h3>kappa senses ubud</h3>
+        <p>fica nos arredores de ubud, a uns 10 minutos do centro, em cerca de dois hectares de vale e selva. são suítes e villas, muitas com piscina privativa, o que dá privacidade de lua de mel, com os programas da cidade a poucos minutos de carro.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- uluwatu -->
+<section class="stop" style="--c:var(--coral)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1598751240191-fbe4a9a30e02?w=1400&q=80&auto=format&fit=crop" alt="falésia sobre o mar azul, em Uluwatu">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1720518816836-e351848c5357?w=800&q=80&auto=format&fit=crop" alt="dança kecak ao pôr do sol">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1604842937136-1648761a6256?w=800&q=80&auto=format&fit=crop" alt="templo no alto da falésia">
+    </div>
+    <div>
+      <div class="when"><span class="pill">26 a 29 de abril</span><span class="eyebrow">3 noites</span></div>
+      <h2>uluwatu</h2>
+      <p>a parte mais turística de bali, vivida com graça. falésias, pôr do sol, mar e boa mesa. três noites bastam para sentir o lugar sem repetir programa.</p>
+      <ul>
+        <li>templo de uluwatu no fim da tarde, com a dança kecak ao pôr do sol.</li>
+        <li>drinks de frente para o mar no el kabron e no single fin.</li>
+        <li>jantar dentro da caverna do the cave, by chef ryan clift, com reserva garantida.</li>
+        <li>café da manhã no suka espresso e uma manhã livre para lojinhas em bingin.</li>
+      </ul>
+      <div class="hotel">
+        <div class="eyebrow">hotel sugerido</div>
+        <h3>suarga padang padang</h3>
+        <p>é um resort boutique no alto de uma falésia, a poucos minutos a pé da praia de padang padang. a piscina infinita parece se fundir ao oceano índico, e a construção usa materiais reaproveitados, o que combina com a vibe mais leve que vocês buscam.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- gili meno -->
+<section class="stop flip" style="--c:var(--salva)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1587364125669-354c5735dd2d?w=1400&q=80&auto=format&fit=crop" alt="vista aérea de gili meno, com areia branca e mar turquesa">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1718357168158-d2dc91212786?w=800&q=80&auto=format&fit=crop" alt="tartaruga marinha nadando sobre o recife">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1724287549821-2a7cb5a873a0?w=800&q=80&auto=format&fit=crop" alt="píer com barco no mar de gili">
+    </div>
+    <div>
+      <div class="when"><span class="pill">29 de abril a 2 de maio</span><span class="eyebrow">3 noites</span></div>
+      <h2>gili meno</h2>
+      <p>aqui é o respiro da viagem. uma ilha pequena, sem carros, de areia branca e mar claro. depois de uluwatu, vocês seguem de carro até o porto de serangan e atravessam de barco rápido.</p>
+      <ul>
+        <li>um dia de passeio pelas ilhas gili com guia, com almoço, e snorkel com tartarugas.</li>
+        <li>volta de bicicleta ou de charrete pela ilha, sem pressa.</li>
+        <li>jantar de frutos do mar com os pés quase na areia, no mahamaya ou no adeng-adeng.</li>
+        <li>pôr do sol do lado oeste, que é o melhor da ilha.</li>
+      </ul>
+      <div class="hotel">
+        <div class="eyebrow">hotel sugerido</div>
+        <h3>bask gili meno</h3>
+        <p>são só 13 vilas, então a sensação é de casa e não de resort grande. já recebemos casais em lua de mel por lá, e a ilha silenciosa é perfeita para três noites de descanso depois da parte mais agitada da viagem.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- labuan bajo -->
+<section class="stop" style="--c:var(--sol)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1589309736404-2e142a2acdf0?w=1400&q=80&auto=format&fit=crop" alt="pôr do sol sobre as ilhas perto de labuan bajo">
+    </div>
+    <div>
+      <div class="when"><span class="pill">2 a 3 de maio</span><span class="eyebrow">1 noite</span></div>
+      <h2>labuan bajo</h2>
+      <p>de gili meno, um barco leva vocês até o aeroporto de lombok e de lá é um voo curto até labuan bajo, porta de entrada de komodo. uma noite aqui descansa a chegada e prepara o embarque.</p>
+      <ul>
+        <li>jantar no pasar malam, o mercado do porto, com peixe na brasa.</li>
+        <li>drink no paradise bar, no alto da colina, olhando as ilhas ao entardecer.</li>
+      </ul>
+      <div class="hotel">
+        <div class="eyebrow">hotel sugerido</div>
+        <h3>sudamala resort, komodo</h3>
+        <p>fica na praia de pede, a uns 6 minutos do porto, com piscina, spa e suítes com vista panorâmica para o mar. é uma base confortável para a única noite antes do barco, sem deslocamento longo na manhã do embarque.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- barco -->
+<section class="stop flip" style="--c:var(--magenta)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1657788405193-c2039edaad6b?w=1400&q=80&auto=format&fit=crop" alt="baía cercada de morros verdes no parque nacional de komodo">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1534573353125-610bb5e8fa05?w=800&q=80&auto=format&fit=crop" alt="proa de um barco em águas calmas">
+      <img class="sm" loading="lazy" src="https://images.unsplash.com/photo-1738432323553-b9471e2239b9?w=800&q=80&auto=format&fit=crop" alt="vista aérea de uma ilha com barcos ancorados">
+    </div>
+    <div>
+      <div class="when"><span class="pill">3 a 5 de maio</span><span class="eyebrow">2 noites</span></div>
+      <h2>barco em komodo</h2>
+      <p>o barco não fica parado. vocês navegam pelo parque nacional, param em ilhas, caminham, nadam e dormem a bordo. é o jeito mais bonito de ver komodo, e abril é começo de estação seca, com as colinas ainda verdes.</p>
+      <ul>
+        <li>nascer do sol na trilha de padar, com a vista das três baías.</li>
+        <li>praia rosa e snorkel em água clara.</li>
+        <li>encontro com os dragões de komodo, com guia do parque.</li>
+        <li>pôr do sol e jantar no convés, com poucos outros viajantes a bordo.</li>
+      </ul>
+      <div class="hotel pending">
+        <div class="eyebrow">barco</div>
+        <h3>akassa cruise, em confirmação</h3>
+        <p>é o barco que estamos olhando para vocês. estamos confirmando cabine, datas e se dá para ficar as duas noites, antes de fecharmos.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- seminyak -->
+<section class="stop" style="--c:var(--coral)">
+  <div class="wrap grid">
+    <div class="photos">
+      <img class="big" loading="lazy" src="https://images.unsplash.com/photo-1766932189685-f840e6590291?w=1400&q=80&auto=format&fit=crop" alt="portal de pedra balinês aberto para a paisagem">
+    </div>
+    <div>
+      <div class="when"><span class="pill">5 a 6 de maio</span><span class="eyebrow">1 noite</span></div>
+      <h2>seminyak</h2>
+      <p>o último dia é para voltar a bali sem pressa. vocês pousam de labuan bajo no fim da tarde, dormem perto do aeroporto e têm a manhã seguinte livre antes do voo da noite.</p>
+      <ul>
+        <li>massagem ou spa de despedida, e café da manhã sem relógio.</li>
+        <li>revolver para o café, a rua kayu aya para as últimas lembranças.</li>
+        <li>potato head ou ku de ta, se der tempo de um último pôr do sol.</li>
+      </ul>
+      <div class="hotel">
+        <div class="eyebrow">hotel sugerido</div>
+        <h3>blue karma dijiwa seminyak</h3>
+        <p>é um hotel boutique de suítes e villas, várias com piscina privativa, com spa e estúdio de yoga. fica perto do aeroporto, o que deixa a manhã do voo tranquila e sem trânsito no fim.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="next">
+  <div class="wrap">
+    <img class="carimbo" src="img/carimbo.png" alt="carimbo aflora">
+    <h2>o que ainda vamos desenhar juntos</h2>
+    <ul>
+      <li>o hotel de singapura.</li>
+      <li>o barco em komodo, com cabine e datas confirmadas.</li>
+      <li>os horários de voos, barcos e transfers entre as ilhas.</li>
+      <li>o dia a dia de cada parada, com os restaurantes e passeios que vocês escolherem.</li>
+    </ul>
+    <p style="font-weight:300;margin:0 0 20px">essa é só a primeira ideia. o que não fizer sentido, a gente troca.</p>
+    <a class="btn" href="https://wa.me/5511947771487">conversa com a gente</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <img src="img/logo-creme.png" alt="aflora">
+    <small>fotos: unsplash. esta página é só para vocês.</small>
+  </div>
+</footer>
+
+</body>
+</html>
