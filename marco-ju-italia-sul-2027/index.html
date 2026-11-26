@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Amalfi, Capri e Sicília</title>
+<style>@font-face{font-family:"Boston Angel";src:url(fonts/Boston_Angel_Regular.ttf) format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url(fonts/FuturaStd-Light.otf) format("opentype");font-weight:300;font-display:swap}
+@font-face{font-family:"Futura Std";src:url(fonts/FuturaStd-Book.otf) format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url(fonts/FuturaStd-Medium.otf) format("opentype");font-weight:500;font-display:swap}
+@font-face{font-family:"Futura Std";src:url(fonts/FuturaStd-Bold.otf) format("opentype");font-weight:700;font-display:swap}/* layout: capa cacau com mosaico, comparativo em 3 cartões, um mood board por destino com cor própria, plano das 18 noites */
+:root{--bg:#FBF8F2;--surface:#FFFFFF;--fg:#643517;--muted:#8B6446;--line:#E6DACB;--cacau:#643517;--creme:#EFE6DA;--limao:#CBCC00;--coral:#FD963A;--salva:#B7E0DE;--magenta:#FF2E86;--sol:#FAFA68;--ink-amalfi:#7C7D00;--ink-capri:#2F6F6B;--ink-sicilia:#B25A0A;--hero:#643517;--herotxt:#EFE6DA;
+--display:"Boston Angel","Cormorant Garamond",Georgia,serif;--body:"Futura Std",Futura,"Avenir Next","Helvetica Neue",system-ui,sans-serif}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#2A1608;--surface:#3A200E;--fg:#EFE6DA;--muted:#C9B397;--line:#573620;--hero:#3A200E;--ink-amalfi:#CBCC00;--ink-capri:#B7E0DE;--ink-sicilia:#FD963A;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#2A1608;--surface:#3A200E;--fg:#EFE6DA;--muted:#C9B397;--line:#573620;--hero:#3A200E;--ink-amalfi:#CBCC00;--ink-capri:#B7E0DE;--ink-sicilia:#FD963A;color-scheme:dark}
+*{box-sizing:border-box}
+body{background:var(--bg);color:var(--fg);font-family:var(--body);font-weight:400;font-size:16px;line-height:1.6;padding-block:0}
+img{display:block;max-width:100%}p{margin:0}
+h1,h2,h3,h4{font-family:var(--display);font-weight:400;line-height:1.08;margin:0;text-wrap:balance;letter-spacing:-.01em}
+:focus-visible{outline:2px solid var(--coral);outline-offset:3px}
+.eyebrow{font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:500;color:var(--coral)}
+.eyebrow.dark{color:var(--muted)}
+.hero{background:var(--hero);color:var(--herotxt);padding-block:28px 56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.hero-in,.wrap,.foot-in{max-width:1120px;margin-inline:auto}
+.logo{width:132px;height:auto}
+.hero-grid{display:grid;grid-template-columns:1.05fr 1fr;gap:48px;align-items:center;margin-top:44px}
+.hero h1{font-size:clamp(44px,7.4vw,92px);margin-top:16px;color:var(--herotxt)}
+.sub{font-weight:300;font-size:clamp(17px,2vw,20px);margin-top:22px;max-width:34em;color:var(--herotxt)}
+.hero-mosaic{display:grid;grid-template-columns:1fr 1fr;grid-template-rows:200px 200px;gap:10px}
+.hero-mosaic img{width:100%;height:100%;object-fit:cover;border-radius:20px}
+.hero-mosaic img:first-child{grid-row:1/3}
+.wrap{padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));padding-block:72px}
+.wrap h2{font-size:clamp(30px,4.6vw,52px);margin-top:10px;max-width:22em}
+.cols-2{display:grid;grid-template-columns:1fr 1fr;gap:36px;margin-top:30px}
+.cols-2 p{max-width:56ch}
+.vs-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;margin-top:36px}
+.vs{background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;display:flex;flex-direction:column;min-width:0}
+.vs>img{width:100%;aspect-ratio:3/2;object-fit:cover}
+.vs-in{padding:22px;display:flex;flex-direction:column;gap:16px}
+.vs h3{font-size:34px}
+.vs.amalfi{--c:var(--limao);--ink:var(--ink-amalfi)}.vs.capri{--c:var(--salva);--ink:var(--ink-capri)}.vs.sicilia{--c:var(--coral);--ink:var(--ink-sicilia)}
+.vs-in{border-top:6px solid var(--c)}
+.big{display:flex;align-items:baseline;gap:12px;flex-wrap:wrap}.big small{font-size:12px;color:var(--muted);letter-spacing:.08em;text-transform:uppercase}
+.meter{display:inline-flex;gap:1px;font-weight:500;letter-spacing:.02em}
+.meter i{font-style:normal;opacity:.22}.meter i.on{opacity:1;color:var(--ink)}
+.big .meter{font-size:28px}
+.mrows{display:flex;flex-direction:column;gap:6px;border-block:1px solid var(--line);padding-block:12px}
+.mrow{display:flex;justify-content:space-between;gap:12px;font-size:14px}
+.mrow .meter{font-size:15px}
+dl{margin:0;display:flex;flex-direction:column;gap:4px;font-size:14px}
+dt{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-top:8px;font-weight:500}
+dd{margin:0}
+.legend{margin-top:20px;font-size:13px;color:var(--muted);max-width:70ch}
+.why{background:var(--surface);max-width:none;border-block:1px solid var(--line);padding-left:max(16px,calc((100% - 1120px)/2));padding-right:max(16px,calc((100% - 1120px)/2))}
+.why-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;margin-top:36px}
+.why-grid h3{font-size:26px;margin-bottom:10px}
+.why-grid p{font-size:15px}
+.dest{padding-block:0}
+.dest .wrap{padding-block:80px}
+.dest.amalfi{--c:var(--limao);--ink:var(--ink-amalfi)}.dest.capri{--c:var(--salva);--ink:var(--ink-capri)}.dest.sicilia{--c:var(--coral);--ink:var(--ink-sicilia)}
+.dest>.wrap{border-top:8px solid var(--c);margin-top:0}
+.dest h2{font-size:clamp(44px,8vw,96px);max-width:none}
+.dest .eyebrow{color:var(--ink)}
+.tag-line{font-size:clamp(18px,2.2vw,22px);font-weight:300;max-width:36em;margin-top:14px}
+.board{display:grid;grid-template-columns:repeat(6,1fr);grid-auto-rows:150px;gap:10px;margin-top:32px}
+.board figure{margin:0;overflow:hidden;border-radius:20px;min-width:0}
+.board img{width:100%;height:100%;object-fit:cover}
+.board .m0{grid-column:1/4;grid-row:1/4}.board .m1{grid-column:4/7;grid-row:1/3}.board .m2{grid-column:4/5;grid-row:3/4}.board .m3{grid-column:5/7;grid-row:3/4}
+.words{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:20px 0 0;padding:0}
+.words li{background:var(--c);color:#2A1608;border-radius:999px;padding:6px 16px;font-size:14px;font-weight:500}
+.two{display:grid;grid-template-columns:1.25fr 1fr;gap:48px;margin-top:44px}
+h3{font-size:28px;margin-bottom:16px}h3.sp{margin-top:32px}
+.facts{display:flex;flex-direction:column;gap:20px}
+.facts article{border-top:1px solid var(--line);padding-top:14px}
+.facts h4{font-size:22px;margin-bottom:6px;color:var(--ink)}
+.facts p{font-size:15px;max-width:60ch}
+.eat{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:14px}
+.eat li{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-top:12px}
+.eat b{font-weight:700;font-size:15px}.eat span{font-size:15px}
+.refs{font-size:15px}.note{font-size:13px;color:var(--muted);margin-top:8px}
+.plan .bar18{display:flex;gap:4px;margin-top:28px}
+.bar18 i{font-style:normal;font-size:13px;font-weight:500;padding:14px 10px;border-radius:12px;text-align:center;color:#2A1608;min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.bar18 .roma{background:var(--coral)}.bar18 .firenze{background:var(--magenta);color:#fff}.bar18 .val{background:var(--sol)}.bar18 .amalfi{background:var(--limao)}
+.plan-list{list-style:none;margin:28px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,1fr);gap:0 40px}
+.plan-list li{display:flex;flex-direction:column;gap:2px;border-top:1px solid var(--line);padding-block:14px}
+.plan-list b{font-weight:700}
+.alt{margin-top:32px;background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 24px;max-width:70ch}
+.ask{border-top:1px solid var(--line)}
+.ask-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin-top:32px}
+.ask-grid h3{font-size:28px;margin-bottom:10px}
+.foot{background:var(--hero);color:var(--herotxt);padding-block:56px;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+.foot-in{display:flex;gap:36px;align-items:center}
+.seal{width:110px;height:auto;flex:none}
+.foot-in p{margin-top:12px;font-size:22px;font-family:var(--display)}
+.foot .small{font-family:var(--body);font-size:12px;opacity:.8;max-width:70ch;font-weight:300}
+@media (max-width:900px){.hero-grid,.cols-2,.two{grid-template-columns:1fr;gap:28px}.vs-grid,.ask-grid{grid-template-columns:1fr}.why-grid,.plan-list{grid-template-columns:1fr 1fr}.hero-mosaic{grid-template-rows:150px 150px}.board{grid-auto-rows:110px}}
+@media (max-width:560px){.why-grid,.plan-list{grid-template-columns:1fr}.plan .bar18{flex-wrap:wrap}.plan .bar18 i{flex:1 1 40%!important}.foot-in{flex-direction:column;align-items:flex-start}.wrap{padding-block:56px}.dest .wrap{padding-block:56px}.board{grid-auto-rows:90px}}
+</style>
+<style>body{margin:0}img{max-width:100%}[hidden]{display:none!important}</style>
+</head>
+<body>
+<header class="hero"><div class="hero-in">
+<img class="logo" src="img/logo-creme.png" alt="aflora">
+<div class="hero-grid"><div>
+<p class="eyebrow">marco e ju · lua de mel</p>
+<h1>o sul da itália em três versões</h1>
+<p class="sub">o que muda entre costa amalfitana, capri e sicília, e por que a gente propõe fazer uma só, bem feita.</p>
+</div><div class="hero-mosaic"><img src="img/amalfi1.jpg" alt="Positano na costa amalfitana"><img src="img/capri2.jpg" alt="Faraglioni em Capri"><img src="img/sicilia4.jpg" alt="Cefalù na Sicília"></div></div>
+</div></header>
+<main>
+<section class="wrap lead-sec"><p class="eyebrow dark">a ideia em uma frase</p>
+<h2>A gente quer que vocês aproveitem de verdade.</h2>
+</section>
+<section class="wrap" id="comparar"><p class="eyebrow dark">lado a lado</p><h2>o mesmo mar, três jeitos de viajar</h2>
+<div class="vs-grid"><article class="vs amalfi"><img src="img/amalfi1.jpg" alt="Casas coloridas descendo a encosta em Positano" loading="lazy">
+<div class="vs-in"><h3>costa amalfitana</h3><div class="big"><span class="meter" aria-label="3 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i></span><small>custo no geral</small></div>
+<div class="mrows"><div class="mrow"><span>hospedagem</span><span class="meter" aria-label="4 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i></span></div><div class="mrow"><span>comida</span><span class="meter" aria-label="3 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i></span></div><div class="mrow"><span>deslocamento</span><span class="meter" aria-label="2 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i><i class="">$</i></span></div><div class="mrow"><span>passeios</span><span class="meter" aria-label="3 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i></span></div></div>
+<dl><dt>como chega</dt><dd>Trem de alta velocidade de Roma ou Firenze até Nápoles ou Salerno, depois transfer ou barco. Tudo no continente.</dd><dt>tempo ideal</dt><dd>5 a 7 noites</dd><dt>carro</dt><dd>Melhor sem carro. A estrada é estreita e estacionar é caro e difícil.</dd><dt>vibe</dt><dd>Cenário de cartão-postal, vilas pequenas, vista de terraço e hotéis com escada ou elevador até o mar.</dd><dt>melhor como</dt><dd>Base de hospedagem para quem quer vista, mar e charme sem sair do continente.</dd></dl></div></article><article class="vs capri"><img src="img/capri2.jpg" alt="Faraglioni e o mar azul visto das falésias" loading="lazy">
+<div class="vs-in"><h3>capri</h3><div class="big"><span class="meter" aria-label="5 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i></span><small>custo no geral</small></div>
+<div class="mrows"><div class="mrow"><span>hospedagem</span><span class="meter" aria-label="5 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i></span></div><div class="mrow"><span>comida</span><span class="meter" aria-label="5 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i></span></div><div class="mrow"><span>deslocamento</span><span class="meter" aria-label="3 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i></span></div><div class="mrow"><span>passeios</span><span class="meter" aria-label="4 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i></span></div></div>
+<dl><dt>como chega</dt><dd>Só de barco, saindo de Nápoles, Sorrento ou Positano. Horários variam com a temporada.</dd><dt>tempo ideal</dt><dd>1 dia basta, 2 noites no máximo</dd><dt>carro</dt><dd>Sem carro. A ilha é pequena e o transporte é local.</dd><dt>vibe</dt><dd>Glamour, boutiques, beach clubs aos pés dos Faraglioni, ilha que enche de dia e esvazia à noite.</dd><dt>melhor como</dt><dd>Dia especial de passeio, mais do que base de hospedagem.</dd></dl></div></article><article class="vs sicilia"><img src="img/sicilia2.jpg" alt="Taormina sobre a encosta, com o mar ao fundo" loading="lazy">
+<div class="vs-in"><h3>sicília</h3><div class="big"><span class="meter" aria-label="2 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i><i class="">$</i></span><small>custo no geral</small></div>
+<div class="mrows"><div class="mrow"><span>hospedagem</span><span class="meter" aria-label="2 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i><i class="">$</i></span></div><div class="mrow"><span>comida</span><span class="meter" aria-label="2 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i><i class="">$</i></span></div><div class="mrow"><span>deslocamento</span><span class="meter" aria-label="3 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i></span></div><div class="mrow"><span>passeios</span><span class="meter" aria-label="2 de 5 cifrões"><i class="on">$</i><i class="on">$</i><i class="">$</i><i class="">$</i><i class="">$</i></span></div></div>
+<dl><dt>como chega</dt><dd>Voo interno de Roma (cerca de 1h30) até Catânia ou Palermo. Dentro da ilha, só de carro.</dd><dt>tempo ideal</dt><dd>7 noites ou mais, para valer a pena</dd><dt>carro</dt><dd>Carro é essencial. As distâncias entre as paradas são longas.</dd><dt>vibe</dt><dd>Cultura, vulcão, barroco e mesa farta. Mais autêntica e menos turística, com praia boa por perto.</dd><dt>melhor como</dt><dd>Viagem própria, para quem tem tempo e quer cidade, vinho e história no mesmo roteiro.</dd></dl></div></article></div><p class="legend">Os cifrões vão de 1 a 5 e comparam os três destinos entre si, somando hospedagem, comida, deslocamento e passeios. É uma estimativa da Aflora para a conversa, não uma cotação.</p></section>
+<section class="wrap why"><p class="eyebrow dark">por que costa amalfitana</p><h2>cenário de capri, sem a conta de capri</h2>
+<div class="why-grid">
+<article><h3>fica no continente</h3><p>Depois de Roma, Firenze e Toscana, o trecho até a costa é de trem e transfer. Sem voo interno, sem travessia de barco com mala e sem dia perdido em aeroporto.</p></article>
+<article><h3>capri cabe em um dia</h3><p>Dá para ir de barco a partir da costa, almoçar nos Faraglioni, ver a Piazzetta e voltar para dormir na costa, por muito menos. O essencial de Capri está nesse dia, e o hotel mais caro da viagem não entra na conta.</p></article>
+<article><h3>praiano no lugar de positano</h3><p>A mesma vista e o mesmo pôr do sol com menos gente e hotéis menores. É onde a costa ainda parece uma vila, o tipo de lugar que combina com lua de mel.</p></article>
+<article><h3>a sicília merece a vez dela</h3><p>É uma ilha grande, com distâncias longas e um jeito próprio de comer e beber. Numa viagem curta, ela vira corrida de carro. Numa viagem só dela, vira a melhor viagem do ano.</p></article>
+</div></section>
+<section class="dest amalfi" id="amalfi"><div class="wrap">
+<p class="eyebrow">mood board</p><h2>costa amalfitana</h2><p class="tag-line">a costa que todo mundo imagina: vilas de pastel penduradas na falésia, limão no ar e o mar lá embaixo.</p>
+<div class="board"><figure class="m0"><img src="img/amalfi1.jpg" alt="Casas coloridas descendo a encosta em Positano" loading="lazy"></figure><figure class="m1"><img src="img/amalfi2.jpg" alt="Positano vista do mar" loading="lazy"></figure><figure class="m2"><img src="img/amalfi3.jpg" alt="Terraço com gerânios em Ravello e a costa ao fundo" loading="lazy"></figure><figure class="m3"><img src="img/amalfi4.jpg" alt="Barco ancorado diante das falésias de Praiano" loading="lazy"></figure></div>
+<ul class="words"><li>limão</li><li>terraço</li><li>escadaria</li><li>barco</li><li>pôr do sol</li></ul>
+<div class="two"><div><h3>o que torna único</h3><div class="facts"><article><h4>Patrimônio da UNESCO</h4><p>A costa é Patrimônio Mundial desde 1997. As vilas foram construídas em terraços de pedra, e o limão sfusato amalfitano, de casca grossa e perfumada, é usado em tudo, do limoncello às sobremesas.</p></article><article><h4>Praiano em vez de Positano</h4><p>Praiano tem a mesma vista com muito menos gente. Entre os guias que a Aflora segue, um recomenda justamente pular Positano e ficar ali. Casa Angelina e o beach club One Fire estão na nossa curadoria.</p></article><article><h4>Ravello, lá no alto</h4><p>Jardins, música e silêncio acima do mar. Caruso, A Belmond Hotel, tem uma das vistas mais famosas da costa. Vale para um jantar ou um dia, mesmo sem dormir lá.</p></article></div></div>
+<div><h3>para comer, beber e passear</h3><ul class="eat"><li><b>La Sponda, Positano</b><span>Jantar à luz de centenas de velas, no restaurante do hotel Le Sirenuse. É o jantar de lua de mel da costa.</span></li><li><b>Lo Scoglio, Massa Lubrense</b><span>Almoço de peixe com os pés quase na água, num lugar que a gente já guardou na curadoria.</span></li></ul><h3 class="sp">hotéis que dão a vibe</h3><p class="refs">Casa Angelina (Praiano), Palazzo Kapece (Praiano), Santa Caterina (Amalfi), Caruso, A Belmond Hotel (Ravello), Villa TreVille (Positano).</p><p class="note">São referências do clima, não hotéis escolhidos. Valores e disponibilidade só depois da cotação.</p></div></div>
+</div></section><section class="dest capri" id="capri"><div class="wrap">
+<p class="eyebrow">mood board</p><h2>capri</h2><p class="tag-line">uma ilha pequena e muito glamourosa, famosa pelo azul, pelos faraglioni e pelas lojas da via camerelle.</p>
+<div class="board"><figure class="m0"><img src="img/capri2.jpg" alt="Faraglioni e o mar azul visto das falésias" loading="lazy"></figure><figure class="m1"><img src="img/capri1.jpg" alt="Porto de Marina Grande com barcos e casas coloridas" loading="lazy"></figure><figure class="m2"><img src="img/capri3.jpg" alt="Enseada dos Faraglioni cheia de barcos" loading="lazy"></figure><figure class="m3"><img src="img/capri4.jpg" alt="Barcos de pesca na areia de Capri" loading="lazy"></figure></div>
+<ul class="words"><li>faraglioni</li><li>piazzetta</li><li>beach club</li><li>branco e azul</li><li>boutique</li></ul>
+<div class="two"><div><h3>o que torna único</h3><div class="facts"><article><h4>A caprese nasceu aqui</h4><p>A salada com mozzarella, tomate e manjericão leva o nome da ilha e vale como parada gastronômica.</p></article><article><h4>O imperador Tibério</h4><p>A ilha foi a residência do imperador romano Tibério nos últimos anos de sua vida. As ruínas da Villa Jovis estão no alto, com vista de 360 graus.</p></article><article><h4>A Grotta Azzurra</h4><p>A gruta de água azul fluorescente só se visita de barco pequeno, e fecha quando o mar está agitado. Quando abre, é um programa que ninguém esquece.</p></article></div></div>
+<div><h3>para comer, beber e passear</h3><ul class="eat"><li><b>La Fontelina, Faraglioni</b><span>Beach club discreto aos pés das rochas, com almoço de frente para o azul.</span></li><li><b>Da Paolino</b><span>Jantar num jardim de limoeiros, sob as árvores. Um dos climas mais românticos da ilha.</span></li><li><b>Le Grottelle</b><span>Restaurante ao lado de um arco natural de pedra, com vista aberta para o mar.</span></li></ul><h3 class="sp">hotéis que dão a vibe</h3><p class="refs">Il Capri, Hotel Punta Tragara, Capri Palace Jumeirah (Anacapri), Hotel La Palma, Grand Hotel Quisisana.</p><p class="note">São referências do clima, não hotéis escolhidos. Valores e disponibilidade só depois da cotação.</p></div></div>
+</div></section><section class="dest sicilia" id="sicilia"><div class="wrap">
+<p class="eyebrow">mood board</p><h2>sicília</h2><p class="tag-line">uma ilha inteira, com vulcão, barroco, vinho e comida de raiz. O contrário de pressa.</p>
+<div class="board"><figure class="m0"><img src="img/sicilia2.jpg" alt="Taormina sobre a encosta, com o mar ao fundo" loading="lazy"></figure><figure class="m1"><img src="img/sicilia3.jpg" alt="Isola Bella em Taormina vista do mar" loading="lazy"></figure><figure class="m2"><img src="img/sicilia4.jpg" alt="Cefalù com a praia e as telhas de barro" loading="lazy"></figure><figure class="m3"><img src="img/sicilia5.jpg" alt="Teatro grego de Siracusa" loading="lazy"></figure></div>
+<ul class="words"><li>etna</li><li>barroco</li><li>granita</li><li>pistache</li><li>templo grego</li></ul>
+<div class="two"><div><h3>o que torna único</h3><div class="facts"><article><h4>A maior ilha do Mediterrâneo</h4><p>Por isso as paradas ficam longe: de Taormina a Ortigia são cerca de 2 horas de carro, e Cefalù fica a umas 3 horas de Taormina, segundo os guias que seguimos. Fazer rápido tira o que a ilha tem de melhor.</p></article><article><h4>Etna, o vulcão ativo</h4><p>O Etna é um dos vulcões mais ativos da Europa, com vinhedos nas encostas e vinhos de montanha muito elogiados. Dá para combinar passeio e degustação no mesmo dia.</p></article><article><h4>Barroco do Val di Noto</h4><p>Noto concentra um barroco de pedra clara reconhecido pela UNESCO, e Ortigia e Siracusa somam ruínas gregas e ruas de pedra. Siracusa guarda um teatro grego do século V a.C.</p></article></div></div>
+<div><h3>para comer, beber e passear</h3><ul class="eat"><li><b>granita com brioche</b><span>É o café da manhã siciliano, em sabores como limão, amêndoa e café.</span></li><li><b>cannoli e cassata</b><span>Ricota doce e pistache são a base da confeitaria da ilha. Vale pedir o cannolo recheado na hora.</span></li><li><b>Tonnara di Scopello</b><span>Antiga fábrica de atum à beira de enseadas de pedra, hoje um dos lugares mais fotogênicos do oeste da ilha.</span></li></ul><h3 class="sp">hotéis que dão a vibe</h3><p class="refs">Villa Sant&#x27;Andrea, A Belmond Hotel (Taormina Mare), San Domenico Palace, Four Seasons (Taormina), Grand Hotel Timeo (Taormina), Villa Igiea (Palermo), Country House Villadorata (Noto).</p><p class="note">São referências do clima, não hotéis escolhidos. Valores e disponibilidade só depois da cotação.</p></div></div>
+</div></section>
+<section class="wrap plan"><p class="eyebrow dark">como ficariam as 18 noites</p><h2>uma possibilidade para conversar</h2>
+<div class="bar18"><i class="roma" style="flex:3">roma</i><i class="firenze" style="flex:2">firenze</i><i class="val" style="flex:4">val d'orcia</i><i class="amalfi" style="flex:7">costa amalfitana</i><i class="roma" style="flex:2">roma</i></div>
+<ul class="plan-list"><li><b>roma, 3 noites</b><span>Chegada, bairros a pé e uma boa mesa romana.</span></li><li><b>firenze, 2 noites</b><span>Arte e vinho toscano, sem maratona.</span></li><li><b>val d'orcia, 4 noites</b><span>Vinícolas, trufa e termas, o lado vinho da viagem.</span></li><li><b>costa amalfitana, 7 noites</b><span>Duas bases, por exemplo Praiano e Ravello, com um dia de barco a Capri.</span></li><li><b>roma, 2 noites</b><span>Fechamento leve, jantar de despedida e voo para casa no dia 29/06.</span></li></ul>
+<p class="alt"><b>e se a Sicília for a preferida?</b> A Costa Amalfitana daria lugar a 7 noites na Sicília oriental, com Taormina e Ortigia, com voo interno saindo de Roma. A hospedagem e a comida saem mais baratas, mas a ilha pede carro e o voo entra no orçamento. Também funciona, é apenas uma escolha diferente.</p></section>
+<section class="wrap ask"><p class="eyebrow dark">para a nossa conversa</p><h2>três perguntas para vocês</h2>
+<div class="ask-grid"><article><h3>vista ou cultura?</h3><p>Vocês se veem mais num terraço olhando o mar, ou numa cidade barroca com mercado e ruínas? Isso decide entre a Costa Amalfitana e a Sicília.</p></article><article><h3>com ou sem carro?</h3><p>Na Costa Amalfitana, a gente recomenda transfer e barco. Na Sicília, carro é parte do programa. Qual combina mais com vocês?</p></article><article><h3>capri em um dia faz sentido?</h3><p>Um dia de barco, almoço e Faraglioni pode ser o ponto alto da viagem, ou pode ser demais. Digam para a gente o que preferem.</p></article></div></section>
+</main>
+<footer class="foot"><div class="foot-in"><img class="seal" src="img/carimbo.png" alt="carimbo aflora"><div><img class="logo" src="img/logo-creme.png" alt="aflora"><p>a gente desenha. vocês vão.</p><p class="small">Referências de hospedagem e restaurantes vêm da curadoria pessoal da Aflora e de guias em que a gente confia. Disponibilidade e valores serão validados na cotação.</p></div></div></footer>
+</body>
+</html>
