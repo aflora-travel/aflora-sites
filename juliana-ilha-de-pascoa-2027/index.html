@@ -1,0 +1,221 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>ilha de páscoa | aflora</title>
+<style>
+@font-face{font-family:"Boston Angel";src:url("fonts/Boston_Angel_Regular.ttf") format("truetype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Light.otf") format("opentype");font-weight:300;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Book.otf") format("opentype");font-weight:400;font-display:swap}
+@font-face{font-family:"Futura Std";src:url("fonts/FuturaStd-Medium.otf") format("opentype");font-weight:500;font-display:swap}
+:root{
+  --cacau:#643517; --creme:#EFE6DA; --creme-50:#FBF8F2;
+  --limao:#CBCC00; --coral:#FD963A; --salva:#B7E0DE; --sol:#FAFA68;
+  --ff-display:"Boston Angel","Cormorant Garamond",Georgia,serif;
+  --ff-body:"Futura Std","Futura","Avenir Next","Helvetica Neue",system-ui,sans-serif;
+  --shadow:0 6px 16px rgba(100,53,23,.08),0 2px 4px rgba(100,53,23,.04);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--creme-50);color:var(--cacau);font-family:var(--ff-body);font-weight:400;font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--ff-display);font-weight:400;text-transform:lowercase;letter-spacing:-.02em;line-height:1.05;color:var(--cacau)}
+.wrap{max-width:980px;margin:0 auto;padding:0 20px}
+.eyebrow{font-weight:500;font-size:.75rem;letter-spacing:.22em;text-transform:uppercase;color:var(--cacau)}
+
+header.hero{background:var(--creme);padding:36px 0 72px;text-align:center}
+.hero img.logo{width:130px;height:auto;display:block;margin:0 auto 56px}
+.hero h1{font-size:clamp(2.8rem,9vw,5.2rem);margin:14px 0 20px}
+.hero p.lead{max-width:560px;margin:0 auto;font-size:1.15rem;font-weight:300}
+.pill{display:inline-block;background:var(--limao);color:var(--cacau);font-weight:500;font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;padding:7px 16px;border-radius:999px;margin-top:28px}
+
+section{padding:72px 0 8px}
+.sec-head{margin-bottom:36px}
+.sec-head h2{font-size:clamp(2.2rem,6vw,3.4rem);margin:10px 0 12px}
+.sec-head p{max-width:620px;font-weight:300;font-size:1.05rem}
+.num{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:50%;background:var(--coral);color:var(--cacau);font-weight:500;font-size:.95rem;margin-right:10px;vertical-align:middle}
+
+.card{display:block;background:#fff;border:1px solid var(--creme);border-radius:20px;box-shadow:var(--shadow);overflow:hidden;margin-bottom:28px}
+.photos{display:grid;grid-template-columns:2fr 1fr;grid-template-rows:1fr 1fr;gap:3px;height:260px;background:var(--creme)}
+.photos img{display:block;width:100%;height:100%;object-fit:cover;min-height:0}
+.photos img:first-child{grid-row:1 / 3}
+.banner{display:block;width:100%;height:260px;object-fit:cover;border-radius:20px;margin-bottom:32px}
+.body{padding:28px 30px 26px;display:flex;flex-direction:column}
+.body h3{font-size:2rem;margin-bottom:6px}
+.meta{font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:14px}
+.body p{font-weight:300;margin-bottom:16px}
+.tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto}
+.tag{background:var(--creme);border-radius:999px;padding:5px 13px;font-size:.82rem;font-weight:400}
+.tag.hl{background:var(--salva)}
+.prices{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:22px;padding-top:20px;border-top:1px solid var(--creme)}
+.price .lbl{display:block;font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500;margin-bottom:6px}
+.price strong{font-family:var(--ff-display);font-weight:400;font-size:2.3rem;line-height:1;display:block}
+.price small{display:block;font-size:.88rem;font-weight:300;margin-top:6px}
+.notice{background:var(--sol);border-radius:16px;padding:20px 24px;margin-top:48px;font-weight:400}
+.notice strong{font-weight:500}
+.fine{margin-top:6px;font-size:.88rem;font-weight:300;max-width:680px}
+
+.incl{display:grid;grid-template-columns:repeat(auto-fit,minmax(210px,1fr));gap:14px;margin-top:8px}
+.incl div{background:#fff;border:1px solid var(--creme);border-radius:16px;padding:18px 20px;box-shadow:var(--shadow)}
+.incl b{display:block;font-family:var(--ff-display);font-weight:400;font-size:1.35rem;text-transform:lowercase;margin-bottom:4px}
+.incl span{font-weight:300;font-size:.95rem}
+
+.closing{margin:72px 0 0;background:var(--creme);padding:64px 0 72px;text-align:center}
+.closing h2{font-size:clamp(2.2rem,6vw,3.2rem);margin:6px 0 14px}
+.closing p{max-width:520px;margin:0 auto 28px;font-weight:300}
+.closing img.stamp{width:86px;height:auto}
+footer{padding:26px 0 40px;text-align:center;font-size:.8rem;font-weight:300}
+
+@media (max-width:720px){
+  body{font-size:16px}
+  .photos{grid-template-columns:1fr 1fr;grid-template-rows:170px 100px;height:auto}
+  .photos img:first-child{grid-row:auto;grid-column:1 / 3}
+  .banner{height:180px}
+  .body{padding:22px 20px 22px}
+  .prices{grid-template-columns:1fr}
+  section{padding-top:56px}
+}
+
+.fab{position:fixed;right:18px;bottom:18px;z-index:40;background:var(--cacau);color:var(--creme-50);border:0;border-radius:999px;padding:15px 26px;font:500 .95rem var(--ff-body);cursor:pointer;box-shadow:0 8px 24px rgba(100,53,23,.3)}
+.fab:hover{background:#4f2a12}
+.btn{display:inline-block;background:var(--cacau);color:var(--creme-50);border:0;border-radius:999px;padding:14px 28px;font:500 1rem var(--ff-body);cursor:pointer;margin-top:22px}
+.modal{position:fixed;inset:0;z-index:50;background:rgba(100,53,23,.55);display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.sheet{background:var(--creme-50);border-radius:24px;width:100%;max-width:640px;max-height:92vh;display:flex;flex-direction:column;overflow:hidden}
+.sheet-head{display:flex;justify-content:space-between;align-items:flex-start;padding:24px 26px 8px}
+.sheet-head h2{font-size:2.1rem}
+.x{background:var(--creme);border:0;border-radius:50%;width:38px;height:38px;font-size:1.2rem;color:var(--cacau);cursor:pointer;flex:none}
+.sheet-body{overflow:auto;padding:8px 26px 18px}
+.grp{margin-top:18px}
+.grp h3{font-size:1.5rem;margin-bottom:4px}
+.grp .sub{font-size:.8rem;letter-spacing:.12em;text-transform:uppercase;font-weight:500;margin-bottom:10px}
+.opt{display:flex;align-items:center;gap:12px;width:100%;text-align:left;background:#fff;border:2px solid var(--creme);border-radius:14px;padding:12px 16px;margin-bottom:8px;cursor:pointer;font:inherit;color:var(--cacau)}
+.opt .n{flex:1;font-weight:500;text-transform:lowercase}
+.opt .n small{display:block;font-weight:300;text-transform:none;font-size:.85rem}
+.opt .v{font-family:var(--ff-display);font-size:1.3rem;white-space:nowrap}
+.opt.on{border-color:var(--cacau);background:var(--creme)}
+.sheet-foot{background:var(--creme);padding:16px 26px 20px;border-top:1px solid #e3d6c3}
+.sheet-foot .row{display:flex;justify-content:space-between;align-items:baseline;gap:12px;font-size:.92rem;font-weight:300}
+.sheet-foot .total{display:flex;justify-content:space-between;align-items:baseline;margin-top:8px}
+.sheet-foot .total span{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;font-weight:500}
+.sheet-foot .total strong{font-family:var(--ff-display);font-weight:400;font-size:2.6rem;line-height:1}
+.sheet-foot .fine{font-size:.8rem;margin-top:8px}
+@media (max-width:720px){.fab{left:16px;right:16px;text-align:center}.sheet-head h2{font-size:1.7rem}.sheet-foot .total strong{font-size:2.1rem}}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <img class="logo" src="img/aflora-marrom.png" alt="aflora">
+    <p class="eyebrow">ilha de páscoa · setembro de 2027</p>
+    <h1>rapa nui,<br>do jeito explora</h1>
+    <p class="lead">cinco noites no explora rapa nui, um lodge de 30 quartos afastado de hanga roa, com passeios guiados, refeições e traslados já incluídos. aqui estão os valores para você viajar sozinha ou com seus pais.</p>
+    <span class="pill">cotação de referência</span><br><button class="btn" onclick="openSim()">veja o total das duas opções</button>
+  </div>
+</header>
+
+<main class="wrap">
+
+  <div class="notice"><strong>como ler os valores:</strong> são tarifas de referência em dólar, para 2 a 7 de setembro de 2027 (5 noites, terminando no feriado de 7 de setembro). os valores já têm a promoção black friday do explora, que vale para reservas feitas até 29 de novembro de 2026. a disponibilidade e o preço final são confirmados na hora da reserva.</div>
+
+  <section id="explora">
+    <img class="banner" src="img/banner-rapa-nui.jpg" alt="pôr do sol diante dos moai, ilha de páscoa">
+    <div class="sec-head">
+      <p class="eyebrow"><span class="num">1</span>ilha de páscoa · 5 noites</p>
+      <h2>explora rapa nui</h2>
+      <p>são 4 suítes e 26 quartos varúa, com interior de madeira natural, vista pro mar ou pro jardim e banheira de hidromassagem. o lodge tem spa, piscina, hidromassagem externa e sauna, e uma cozinha que mistura sabores polinésios e chilenos.</p>
+    </div>
+
+    <article class="card">
+      <div class="photos"><img src="img/varua-1.jpg" alt="quarto varúa do explora rapa nui"><img src="img/varua-2.jpg" alt="detalhe do quarto"><img src="img/lodge-1.jpg" alt="lodge explora rapa nui"></div>
+      <div class="body">
+        <h3>varúa king</h3>
+        <p class="meta">cama king · madeira natural · hidromassagem</p>
+        <p>o quarto que cotamos para as duas opções. dá pra ficar num quarto só seu, ou em outro quarto king para seus pais, com tudo do explora incluído na diária.</p>
+        <div class="tags"><span class="tag hl">tudo incluído</span><span class="tag">banheira de hidromassagem</span><span class="tag">vista pro mar ou jardim</span></div>
+        <div class="prices">
+          <div class="price"><span class="lbl">só você · 5 noites</span><strong id="p1">US$ 4.088</strong><small>1 quarto varúa king para 1 viajante. de US$ 5.450, com a promoção black friday</small></div>
+          <div class="price"><span class="lbl">você e seus pais · 5 noites</span><strong id="p3">US$ 11.213</strong><small>2 quartos: 1 para você (US$ 4.088) e 1 para seus pais (US$ 7.125). de US$ 14.950, com a promoção black friday</small></div>
+        </div>
+      </div>
+    </article>
+
+    <div class="sec-head" style="margin-top:44px;margin-bottom:20px">
+      <h2 style="font-size:2.2rem">o que está incluído</h2>
+    </div>
+    <div class="incl">
+      <div><b>passeios guiados</b><span>você escolhe entre 30 explorações com guias do explora, todas incluídas.</span></div>
+      <div><b>refeições e bebidas</b><span>todas as refeições e bebidas do lodge, com vinhos chilenos.</span></div>
+      <div><b>spa</b><span>acesso às instalações do spa, piscina, hidromassagem e sauna.</span></div>
+      <div><b>parque nacional</b><span>as entradas do parque nacional rapa nui estão incluídas.</span></div>
+      <div><b>traslados</b><span>ida e volta entre o aeroporto de mataveri e o lodge, em horários pré-definidos.</span></div>
+    </div>
+
+    <div class="sec-head" style="margin-top:44px;margin-bottom:20px">
+      <h2 style="font-size:2.2rem">como funciona o pagamento</h2>
+      <p>você pode pagar tudo de uma vez ou dar um sinal de 30% e pagar o restante até 4 de julho de 2027.</p>
+    </div>
+    <div class="prices" style="border-top:0;padding-top:0;margin-top:0">
+      <div class="price card" style="padding:22px 24px;margin:0"><span class="lbl">só você · sinal de 30%</span><strong>US$ 1.226</strong><small>de um total de US$ 4.088</small></div>
+      <div class="price card" style="padding:22px 24px;margin:0"><span class="lbl">você e seus pais · sinal de 30%</span><strong>US$ 3.364</strong><small>de um total de US$ 11.213</small></div>
+    </div>
+
+    <p class="fine" style="margin-top:28px">os valores são só da hospedagem com o que está incluído acima. passagens aéreas (o voo para a ilha de páscoa sai de santiago) ficam à parte, e a gente pode cuidar delas junto.</p>
+  </section>
+
+</main>
+
+<div class="closing">
+  <div class="wrap">
+    <img class="stamp" src="img/carimbo.png" alt="">
+    <h2>agora é escolher</h2>
+    <p>me conta se seus pais vão com você e se as datas de 2 a 7 de setembro funcionam. com isso a gente confere a disponibilidade e dá o próximo passo.</p>
+  </div>
+</div>
+
+<footer>aflora · viagens sob medida</footer>
+
+<button class="fab" onclick="openSim()">veja o total</button>
+
+<div class="modal" id="sim" onclick="if(event.target===this)closeSim()">
+  <div class="sheet" role="dialog" aria-modal="true" aria-label="simulador">
+    <div class="sheet-head">
+      <div><p class="eyebrow">simulador</p><h2>escolha o seu grupo</h2></div>
+      <button class="x" onclick="closeSim()" aria-label="fechar">×</button>
+    </div>
+    <div class="sheet-body">
+      <div class="grp"><h3>explora rapa nui</h3><p class="sub">5 noites · 2 a 7 de setembro de 2027</p><div id="opts"></div></div>
+    </div>
+    <div class="sheet-foot">
+      <div class="row"><span id="l-s">grupo: nenhum</span><b id="v-s">US$ 0</b></div>
+      <div class="row"><span>sinal de 30% na reserva</span><b id="v-d">US$ 0</b></div>
+      <div class="total"><span>total da hospedagem</span><strong id="tot">US$ 0</strong></div>
+      <p class="fine">valores em dólar, só hospedagem com o que está incluído. passagens à parte. sujeito à confirmação de disponibilidade.</p>
+    </div>
+  </div>
+</div>
+
+<script>
+var O=[["só você","1 quarto varúa king",4088,1226],["você e seus pais","2 quartos varúa king",11213,3364]];
+var sel=-1;
+function usd(n){return "US$ "+Math.round(n).toLocaleString("pt-BR")}
+var h="";O.forEach(function(o,i){h+='<button class="opt" data-i="'+i+'"><span class="n">'+o[0]+'<small>'+o[1]+'</small></span><span class="v">'+usd(o[2])+'</span></button>'});
+document.getElementById("opts").innerHTML=h;
+function upd(){
+  var o=sel>-1?O[sel]:null;
+  document.getElementById("l-s").textContent="grupo: "+(o?o[0]:"nenhum");
+  document.getElementById("v-s").textContent=usd(o?o[2]:0);
+  document.getElementById("v-d").textContent=usd(o?o[3]:0);
+  document.getElementById("tot").textContent=usd(o?o[2]:0);
+  document.querySelectorAll(".opt").forEach(function(b){b.classList.toggle("on",+b.dataset.i===sel)});
+}
+document.getElementById("sim").addEventListener("click",function(e){var b=e.target.closest(".opt");if(!b)return;sel=+b.dataset.i;upd()});
+function openSim(){document.getElementById("sim").classList.add("open");document.body.style.overflow="hidden";upd()}
+function closeSim(){document.getElementById("sim").classList.remove("open");document.body.style.overflow=""}
+document.addEventListener("keydown",function(e){if(e.key==="Escape")closeSim()});
+</script>
+
+</body>
+</html>
