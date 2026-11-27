@@ -121,6 +121,13 @@ a { color: var(--laranja); }
 .next { margin: 0; padding-left: 20px; display: flex; flex-direction: column; gap: 8px; }
 .footer { font-size: 0.74rem; letter-spacing: 0.1em; color: var(--suave); text-align: center; }
 @media (max-width: 520px) { .day { grid-template-columns: 54px minmax(0, 1fr); gap: 14px; } .date b { font-size: 2rem; } .strip { height: 150px; } }
+
+.tabbar { background: #fff; border-bottom: 1px solid var(--creme-linha); position: sticky; top: 0; z-index: 5; }
+.tabbar .inner { display: flex; gap: 6px; }
+.tabbar button { font: 500 0.92rem var(--sans); color: var(--suave); background: none; border: 0; border-bottom: 3px solid transparent; padding: 16px 14px 13px; cursor: pointer; }
+.tabbar button[aria-selected="true"] { color: var(--texto); border-bottom-color: var(--laranja); }
+.tabbar button:focus-visible { outline: 2px solid var(--laranja); outline-offset: -2px; }
+[hidden] { display: none !important; }
 </style>
 </head>
 <body>
@@ -136,7 +143,11 @@ a { color: var(--laranja); }
   </div>
 </div>
 
-<div class="content pad">
+<div class="tabbar pad"><div class="inner" role="tablist" aria-label="Seções da página">
+  <button type="button" role="tab" id="aba-proposta" aria-controls="painel-proposta" aria-selected="false">Proposta</button>
+  <button type="button" role="tab" id="aba-confirmadas" aria-controls="painel-confirmadas" aria-selected="true">Reservas confirmadas</button>
+</div></div>
+<div class="content pad" id="painel-proposta" role="tabpanel" aria-labelledby="aba-proposta" hidden>
   <div class="inner" style="display:flex;flex-direction:column;gap:68px">
 
     <div>
@@ -356,5 +367,54 @@ a { color: var(--laranja); }
   </div>
 </div>
 
+<div class="content pad" id="painel-confirmadas" role="tabpanel" aria-labelledby="aba-confirmadas" hidden>
+  <div class="inner" style="display:flex;flex-direction:column;gap:56px">
+    <section class="sec" style="--bar: var(--laranja)">
+      <h2>Reservas confirmadas</h2>
+      <p class="lede">Os passeios e transfers de vocês estão reservados com a operadora local, a GPS Travel, sob a reserva GPSFTE-19125. Todos os horários são reconfirmados com vocês um dia antes da chegada a El Calafate.</p>
+      <ol class="days"><li class="day"><div class="date"><b>18</b><span>seg · jan</span></div><div><h3>Chegada a El Calafate</h3><p>Transfer privado do aeroporto ao Montano Boutique Suites. O voo AR 1850 pousa às 20h05.</p><span class="tag">Transfer privado</span></div></li><li class="day"><div class="date"><b>19</b><span>ter · jan</span></div><div><h3>Big Ice</h3><p>Saída às 7h do Montano, em grupo. Caminhada sobre o gelo do Perito Moreno, com crampones, capacete e arnês fornecidos pelo operador. Levem bota ou tênis de trekking impermeável.</p><p>Reserva 805065. A entrada do Parque Nacional (2 dias) está incluída, com o 1º ingresso por Río Mitre.</p><span class="tag">Saída 7h</span><span class="tag">Ficha médica obrigatória</span></div></li><li class="day"><div class="date"><b>20</b><span>qua · jan</span></div><div><h3>Estancia Cristina Classic</h3><p>Às 7h, transfer do hotel até o Puerto Bandera. Às 9h começa a excursão classic, com almoço incluído. Reserva 89862.</p><p>O 2º ingresso do parque é por Puerto Bandera. Avisamos que a Julia não come carne vermelha.</p><span class="tag">Transfer 7h</span><span class="tag">Almoço incluído</span></div></li><li class="day"><div class="date"><b>21</b><span>qui · jan</span></div><div><h3>Cabalgata e estrada para El Chaltén</h3><p>Às 9h30, saída do Montano para a cabalgata experience, com almoço incluído. Avisamos que a Julia não come carne vermelha.</p><p>Às 16h, transfer privado do Montano até a Estancia La Quinta, em El Chaltén. Horário a reconfirmar.</p><span class="tag">Cabalgata 9h30</span><span class="tag">Transfer privado 16h</span></div></li><li class="day"><div class="date"><b>22</b><span>sex · jan</span></div><div><h3>Laguna de los Tres</h3><p>Saída às 8h da Estancia La Quinta, em grupo, com a entrada do parque por Río Eléctrico incluída. Horário a reconfirmar.</p><p>Box lunch das 8h30: falta escolher o sabor do sanduíche, até 24h antes.</p><span class="tag">Saída 8h</span><span class="tag">Escolher box lunch</span></div></li><li class="day"><div class="date"><b>23</b><span>sáb · jan</span></div><div><h3>Laguna Torre</h3><p>Às 8h, transfer privado da La Quinta até o Portal Cerro Torre. Às 8h30, trekking com guia a partir do Portal Base Fitz Roy. Horários a reconfirmar.</p><p>O 2º ingresso do parque é por Base Fitz Roy. Box lunch: falta escolher o sabor.</p><span class="tag">Trekking com guia</span><span class="tag">Escolher box lunch</span></div></li><li class="day"><div class="date"><b>24</b><span>dom · jan</span></div><div><h3>Volta ao aeroporto</h3><p>Pick up às 7h30 na Estancia La Quinta, em transfer privado. O voo AR 1843 decola às 12h30, e a apresentação no aeroporto é às 10h.</p><span class="tag">Pick up 7h30</span><span class="tag">Voo 12h30</span></div></li></ol>
+    </section>
+    <section>
+      <div class="box">
+        <p class="eyebrow">Pagamento dos passeios</p>
+        <h2>O que já foi pago e o que falta</h2>
+        <div class="line"><span>Total dos passeios</span><span class="v">US$ 3.348</span></div>
+        <div class="line"><span>Sinal de 50%, pago</span><span class="v">US$ 1.674</span></div>
+        <div class="line last"><span><b>Falta pagar, até 11 de janeiro</b></span><span class="v">US$ 1.674</span></div>
+        <p class="note">O saldo vence 7 dias antes do primeiro serviço. Valores em dólar, sem hospedagem nem passagens.</p>
+      </div>
+    </section>
+    <section class="sec" style="--bar: var(--teal)">
+      <h2>O que falta definir</h2>
+      <div class="logi">
+        <div class="card"><h3>Box lunch dos dias 22 e 23</h3><p>Escolher o sabor do sanduíche até 24h antes de cada passeio. Cada box traz sanduíche, bolo doce, fruta, mix de castanhas e água. Opções: estepa, ternera, campo, huerta (vegetais), viena, parma, atún, ahumado, trucha e porchetta. Sem carne vermelha: campo (frango), huerta, atún ou trucha. Dá para pedir sem glúten, avisando antes.</p></div>
+        <div class="card"><h3>Ficha médica do Big Ice</h3><p>Obrigatória. Preencher em <a href="https://hieloyaventura.com/ficha-medica/">hieloyaventura.com/ficha-medica</a>, com o número da reserva (805065), a data (19/01/2027) e 2 passageiros. O box lunch do Big Ice é opcional e precisa ser confirmado agora, para já ficar cobrado.</p></div>
+      </div>
+    </section>
+    <section class="sec" style="--bar: var(--lima)">
+      <h2>Bom saber</h2>
+      <div class="logi">
+        <div class="card"><h3>Hospedagem</h3><p>18 a 21 de janeiro: Montano Boutique Suites, em El Calafate. 21 a 24 de janeiro: Estancia La Quinta, em El Chaltén.</p></div>
+        <div class="card"><h3>Parque Nacional</h3><p>As entradas do Parque Nacional Los Glaciares estão incluídas e são entregues a vocês para apresentar no acesso.</p></div>
+        <div class="card"><h3>Contato</h3><p>GPS Travel, reservas: reservas@gps-travel.com.ar. Aflora Travel: oi@aflora.club.</p></div>
+      </div>
+    </section>
+  </div>
+</div>
+<script>
+(function(){
+  var tabs={proposta:document.getElementById('aba-proposta'),confirmadas:document.getElementById('aba-confirmadas')};
+  var panels={proposta:document.getElementById('painel-proposta'),confirmadas:document.getElementById('painel-confirmadas')};
+  function show(k,push){
+    for(var n in tabs){var on=(n===k);tabs[n].setAttribute('aria-selected',on?'true':'false');panels[n].hidden=!on;}
+    if(push){try{history.replaceState(null,'','#'+k);}catch(e){}}
+    window.scrollTo(0,0);
+  }
+  for(var n in tabs){(function(k){tabs[k].addEventListener('click',function(){show(k,true);});})(n);}
+  var h=(location.hash||'').replace('#','');
+  show(h==='proposta'?'proposta':'confirmadas',false);
+})();
+</script>
+<noscript><style>[hidden]{display:block !important}</style></noscript>
 </body>
 </html>
